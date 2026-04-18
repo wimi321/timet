@@ -42,6 +42,29 @@ Timet is a multilingual, offline-first strategy app built for historical and fic
 You describe the era, place, identity, starting resources, and goal.
 Timet answers like a sharp strategist with practical routes for wealth, influence, cover, and realistic modern-edge leverage.
 
+## Product Preview
+
+<table>
+  <tr>
+    <td width="50%">
+      <img src="./docs/assets/timet-home-en.png" alt="Timet home screen in English" />
+    </td>
+    <td width="50%">
+      <img src="./docs/assets/timet-answer-en.png" alt="Timet answer screen in English" />
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <strong>Home briefing</strong><br/>
+      Start with <code>era + place + identity + resources + goal</code>, then pick a route or type straight into the strategist.
+    </td>
+    <td valign="top">
+      <strong>Route answer</strong><br/>
+      Timet replies in a five-part strategist brief, grounded in the local knowledge pack and written for action.
+    </td>
+  </tr>
+</table>
+
 ## Why Timet
 
 - Route-first, not lore-first. It gives you a playable path, not a wall of background trivia.
@@ -151,8 +174,8 @@ npm run mobile:ios
 - [x] Chinese and English first-run product copy
 - [x] Curated offline knowledge pack with route-aware retrieval
 - [x] Public GitHub release with CI, discussions, and release metadata
+- [x] Better public demo assets and storefront-style screenshots
 - [ ] Broader historical region coverage beyond the current seed set
-- [ ] Better public demo assets and storefront-style screenshots
 - [ ] Richer release artifacts for mobile installation
 
 ## License
