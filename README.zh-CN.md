@@ -1,61 +1,73 @@
 # 穿越助手 / Timet
 
 <p align="center">
+  <a href="https://github.com/wimi321/timet/releases">
+    <img alt="Release" src="https://img.shields.io/github/v/release/wimi321/timet?style=flat-square">
+  </a>
+  <a href="https://github.com/wimi321/timet/actions/workflows/ci.yml">
+    <img alt="CI" src="https://img.shields.io/github/actions/workflow/status/wimi321/timet/ci.yml?branch=main&style=flat-square&label=CI">
+  </a>
+  <a href="./LICENSE">
+    <img alt="License" src="https://img.shields.io/github/license/wimi321/timet?style=flat-square">
+  </a>
+  <img alt="Platforms" src="https://img.shields.io/badge/platforms-Web%20%7C%20Android%20%7C%20iOS-111827?style=flat-square">
+  <a href="https://github.com/wimi321/timet/stargazers">
+    <img alt="Stars" src="https://img.shields.io/github/stars/wimi321/timet?style=flat-square">
+  </a>
+</p>
+
+<p align="center">
   <strong>给穿越者准备的极简军师 App。</strong>
 </p>
 
 <p align="center">
-  Timet 基于原 Beacon 壳层能力重做，但定位已经完全切到穿越题材：
-  你直接写出时代、地点、身份、资源和目标，
-  它就按小说军师口吻给你首富线、上位线、避坑线和现代知识外挂。
+  <a href="./README.md">English</a>
+  ·
+  <a href="./README.zh-CN.md">简体中文</a>
+  ·
+  <a href="https://github.com/wimi321/timet/releases">发布版本</a>
+  ·
+  <a href="./docs/ROUTES.md">路线设计</a>
+  ·
+  <a href="./docs/KNOWLEDGE_PACK.md">知识包</a>
+  ·
+  <a href="https://github.com/wimi321/timet/discussions">讨论区</a>
 </p>
 
-## 品牌
+<p align="center">
+  <img src="./docs/assets/timet-hero.svg" alt="Timet hero" width="100%">
+</p>
 
-- 中文名：`穿越助手`
-- 英文短名：`Timet`
-- 完整展示名：`穿越助手 / Timet`
-- 英文副说明：`A time-travel strategy assistant`
+Timet 是一个面向历史 / 架空穿越场景的多语言、离线优先策略助手。
+你直接告诉它时代、地点、身份、手里资源和目标。
+它不会陪你空谈设定，而是像小说军师一样，给你一条能落地的首富线、上位线、避坑线或现代知识外挂路线。
 
-## 产品形态
+## 为什么是 Timet
 
-- V1 只做 `简单问答`
-- 不做时代选择器
-- 不做自动判断时代
-- 不做成长系统
-- 不做身份模板
-- 用户自己在问题里交代背景
+- 先给路线，不先堆设定。重点是怎么走，不是背景故事复述。
+- 中文和英文一起做，不是只照顾单一语言用户。
+- 故意不做时代选择器，也不假装“自动识别时代”。
+- 回答结构固定，方便持续追问和拆阶段执行。
+- 以本地模型和离线知识包为核心，而不是依赖云端包装。
 
-推荐提问公式：
+## 提问契约
+
+Timet 最适合的问题格式：
 
 `时代 + 地点 + 身份 + 资源 + 目标`
 
-例如：
+### 推荐提问
 
-- `我在北宋汴京，识字，有一点碎银，怎么三个月赚到第一桶金？`
-- `晚清上海通商口岸，小商人，怎么先发财再积攒影响力？`
-- `我刚穿到陌生古代城市，最先不能暴露什么？`
+| 路线 | 中文示例 | 英文示例 |
+| --- | --- | --- |
+| `首富线` | `我在北宋汴京，识字，有一点碎银，怎么三个月赚到第一桶金？` | `Northern Song Kaifeng, literate, little silver, how do I make my first fortune in 90 days?` |
+| `上位线` | `我在晚清上海通商口岸，给商号跑单，怎样先结交靠山再上位？` | `Late Qing treaty port, I run papers for a trading house. How do I gain influence without getting crushed?` |
+| `避坑线` | `我在南宋临安，刚到陌生城里，没有靠山，最先不能暴露什么？` | `I just arrived in a medieval city with no backing. What must I hide first to blend in?` |
+| `现代知识外挂` | `我在晚清上海，有一点本钱，哪些现代知识最先能变成真钱？` | `Late Qing Shanghai with a little capital. Which modern methods can I turn into money first?` |
 
-## 主要路线
+## 回答契约
 
-- `首富线`
-- `上位线`
-- `避坑线`
-- `现代知识外挂`
-- `视觉线索`
-
-## 离线知识包
-
-当前离线知识包围绕以下主题重建：
-
-- 经商套利与商路起家
-- 结盟、门路、 patronage、合法性
-- 刚穿越时的藏锋与避坑
-- 真能落地的现代工艺、流程和标准化外挂
-- 通商口岸与近现代商业加速路线
-- 钱币、文字、印章、衣料、器物的线索扫描
-
-Timet 的回答固定输出五段：
+Timet 的核心回答固定收敛成五段：
 
 1. `局面判断`
 2. `先走三步`
@@ -63,31 +75,86 @@ Timet 的回答固定输出五段：
 4. `绝不能暴露的事`
 5. `你下一句该问什么`
 
-## 技术栈
+回答风格示意：
 
-- React + Vite 前端
-- Capacitor 原生壳
-- 沿用原 Beacon 的本地模型桥接能力
-- 由 `knowledge/source_manifest.json` 和 `knowledge/entry_seed.json` 生成离线知识包
+```text
+局面判断
+你处在一个高流通、低本钱的起步局面，真正值钱的是周转、信用和掩护，而不是一开局就跨时代发明。
 
-## 进一步文档
+先走三步
+1. 先做高频、轻资产、重复需求的货或服务。
+2. 先把账本、标价和交付稳定下来。
+3. 先靠近客栈、码头、书坊、行会一类稳定客流。
 
-- [路线设计说明](./docs/ROUTES.md)
-- [知识包说明](./docs/KNOWLEDGE_PACK.md)
+发财 / 上位主路径
+先让现金流站稳，再把文书、渠道、票据、关系网一层层接上去。
 
-## 本地开发
+绝不能暴露的事
+不要让人觉得你像妖人、骗子，或对这个时代知道得不正常。
+
+你下一句该问什么
+把这条路线拆成 7 天 / 30 天 / 90 天。
+```
+
+## 核心路线
+
+| 路线 | 作用 | 适合的问题 |
+| --- | --- | --- |
+| `首富线` | 找到第一条稳定赚钱的现实路径。 | 小本生意、商路、账房、套利、渠道 |
+| `上位线` | 先变成有用的人，再慢慢变成不能绕过的人。 | 门路、结盟、官场边缘、军政后勤、豪门依附 |
+| `避坑线` | 先告诉你哪些话不能说、哪些事不能做。 | 刚穿越、身份未稳、礼法未知、口音和习俗风险 |
+| `现代知识外挂` | 把现代知识降级成这个时代能真的吃下去的优势。 | 工艺、流程、包装、标准化、组织效率 |
+| `视觉线索` | 从钱币、文字、器物这些线索里反推下一步。 | 看图提问、环境判断、补时代感知 |
+
+## 产品原则
+
+- 时代或地点没说清，就追问，不胡编。
+- 默认先走 `首富线`，只有明确问权力才把 `上位线`提到主位。
+- 低资源、低工艺时代，不给明显做不成的工业神话。
+- 口吻可以像军师，但路径必须可执行。
+- 历史 / 架空是产品语境，不把内容做成现实世界伤害教程。
+
+## 快速开始
 
 ```bash
 npm install
 npm run knowledge:build
+npm run dev
+```
+
+验证：
+
+```bash
 npm test
+dart test
 npm run build
 ```
 
-## 说明
+移动端壳层：
 
-- GitHub 仓库：[wimi321/timet](https://github.com/wimi321/timet)
-- 原来的 `/Users/haoc/Developer/Beacon` 没有被修改。
-- 当前项目是独立拷贝后的新仓库：`/Users/haoc/Developer/timet`。
-- 继承来的 Beacon 本地远程已经改名为 `beacon-local`。
-- 当前 `origin` 已经指向正式发布仓库。
+```bash
+npm run mobile:android
+npm run mobile:ios
+```
+
+## 仓库导览
+
+- [路线设计说明](./docs/ROUTES.md)
+- [知识包说明](./docs/KNOWLEDGE_PACK.md)
+- [参与贡献](./CONTRIBUTING.zh-CN.md)
+- [安全策略](./SECURITY.zh-CN.md)
+- [最新版本](https://github.com/wimi321/timet/releases)
+
+## 路线图
+
+- [x] 完成路线驱动的 V1 问答形态
+- [x] 补齐中文与英文核心产品文案
+- [x] 完成首批离线穿越知识包
+- [x] 完成公开 GitHub 仓库、CI 与 Release
+- [ ] 扩大时代与地区覆盖面
+- [ ] 补更强的公开展示素材和截图
+- [ ] 补更完整的移动端发布产物
+
+## License
+
+Timet 基于 [Apache-2.0](./LICENSE) 开源。

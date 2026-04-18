@@ -1,0 +1,88 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Timet hero artwork</title>
+  <desc id="desc">A styled banner for Timet showing the prompt formula, routes, and structured answer format.</desc>
+  <defs>
+    <linearGradient id="bg" x1="84" y1="64" x2="1124" y2="656" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1C1917"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#F6EFE2"/>
+      <stop offset="1" stop-color="#E8DCC6"/>
+    </linearGradient>
+    <linearGradient id="chip" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#A16207"/>
+      <stop offset="1" stop-color="#92400E"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1200" height="720" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#020617" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <rect x="36" y="36" width="1128" height="648" rx="32" fill="url(#bg)"/>
+  <rect x="52" y="52" width="1096" height="616" rx="26" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="2"/>
+
+  <g opacity="0.12">
+    <path d="M108 144H1092" stroke="#F5F5F4" stroke-width="1.5"/>
+    <path d="M108 196H1092" stroke="#F5F5F4" stroke-width="1.5"/>
+    <path d="M108 248H1092" stroke="#F5F5F4" stroke-width="1.5"/>
+    <path d="M108 300H1092" stroke="#F5F5F4" stroke-width="1.5"/>
+    <path d="M108 352H1092" stroke="#F5F5F4" stroke-width="1.5"/>
+    <path d="M108 404H1092" stroke="#F5F5F4" stroke-width="1.5"/>
+    <path d="M108 456H1092" stroke="#F5F5F4" stroke-width="1.5"/>
+    <path d="M108 508H1092" stroke="#F5F5F4" stroke-width="1.5"/>
+    <path d="M108 560H1092" stroke="#F5F5F4" stroke-width="1.5"/>
+    <path d="M188 92V628" stroke="#F5F5F4" stroke-width="1.5"/>
+    <path d="M320 92V628" stroke="#F5F5F4" stroke-width="1.5"/>
+    <path d="M452 92V628" stroke="#F5F5F4" stroke-width="1.5"/>
+    <path d="M584 92V628" stroke="#F5F5F4" stroke-width="1.5"/>
+    <path d="M716 92V628" stroke="#F5F5F4" stroke-width="1.5"/>
+    <path d="M848 92V628" stroke="#F5F5F4" stroke-width="1.5"/>
+    <path d="M980 92V628" stroke="#F5F5F4" stroke-width="1.5"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="84" y="84" width="486" height="552" rx="28" fill="#111827" stroke="#FFFFFF" stroke-opacity="0.08"/>
+    <text x="124" y="148" fill="#FCD34D" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20" font-weight="700" letter-spacing="0.2em">TIMET</text>
+    <text x="124" y="214" fill="#FAFAF9" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="54" font-weight="800">A time-travel</text>
+    <text x="124" y="274" fill="#FAFAF9" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="54" font-weight="800">strategy assistant</text>
+    <text x="124" y="328" fill="#D6D3D1" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="24" font-weight="500">Route-first answers for wealth, influence, cover,</text>
+    <text x="124" y="360" fill="#D6D3D1" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="24" font-weight="500">and realistic modern-edge leverage.</text>
+
+    <rect x="124" y="406" width="406" height="62" rx="16" fill="#FAFAF9" fill-opacity="0.06" stroke="#FAFAF9" stroke-opacity="0.12"/>
+    <text x="148" y="444" fill="#F5F5F4" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700">era + place + identity + resources + goal</text>
+
+    <rect x="124" y="498" width="144" height="42" rx="21" fill="url(#chip)"/>
+    <text x="155" y="524" fill="#FEF3C7" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="17" font-weight="700">Fortune Line</text>
+
+    <rect x="282" y="498" width="132" height="42" rx="21" fill="#1F2937" stroke="#FFFFFF" stroke-opacity="0.1"/>
+    <text x="319" y="524" fill="#E7E5E4" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="17" font-weight="700">Power Line</text>
+
+    <rect x="124" y="554" width="162" height="42" rx="21" fill="#1F2937" stroke="#FFFFFF" stroke-opacity="0.1"/>
+    <text x="154" y="580" fill="#E7E5E4" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="17" font-weight="700">Fatal Mistakes</text>
+
+    <rect x="300" y="554" width="158" height="42" rx="21" fill="#1F2937" stroke="#FFFFFF" stroke-opacity="0.1"/>
+    <text x="336" y="580" fill="#E7E5E4" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="17" font-weight="700">Modern Edge</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="620" y="112" width="498" height="496" rx="28" fill="url(#card)"/>
+    <rect x="652" y="144" width="434" height="60" rx="16" fill="#111827"/>
+    <text x="680" y="182" fill="#FCD34D" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="22" font-weight="800">Structured Answer Contract</text>
+
+    <text x="664" y="252" fill="#292524" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="24" font-weight="800">1. Current Read</text>
+    <text x="664" y="284" fill="#57534E" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="19" font-weight="500">Read the board before making noise.</text>
+
+    <text x="664" y="338" fill="#292524" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="24" font-weight="800">2. First Three Moves</text>
+    <text x="664" y="370" fill="#57534E" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="19" font-weight="500">Open with low-barrier, repeatable steps.</text>
+
+    <text x="664" y="424" fill="#292524" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="24" font-weight="800">3. Riches / Power Path</text>
+    <text x="664" y="456" fill="#57534E" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="19" font-weight="500">Stabilize cash flow, then climb by leverage.</text>
+
+    <text x="664" y="510" fill="#292524" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="24" font-weight="800">4. Do Not Expose</text>
+    <text x="664" y="542" fill="#57534E" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="19" font-weight="500">Avoid sounding miraculous, modern, or wrong.</text>
+
+    <text x="664" y="596" fill="#292524" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="24" font-weight="800">5. Ask Me Next</text>
+    <text x="664" y="628" fill="#57534E" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="19" font-weight="500">Break it into 7-day, 30-day, and 90-day phases.</text>
+  </g>
+</svg>
