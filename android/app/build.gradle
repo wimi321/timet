@@ -21,7 +21,9 @@ def arm64OnlyBuild = providers.gradleProperty('beaconArm64Only')
     .get()
 
 tasks.register('stageBundledGemmaE2B') {
-    inputs.file(bundledGemmaArtifact)
+    if (bundleGemmaInApk) {
+        inputs.file(bundledGemmaArtifact)
+    }
     outputs.file(stagedBundledGemmaFile)
 
     doLast {
