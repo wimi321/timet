@@ -13,7 +13,7 @@ function TestComponent() {
       <span data-testid="translated-kicker">{t('hero.kicker')}</span>
       <button onClick={() => setLocale('zh-CN')}>Switch CN</button>
       <button onClick={() => setLocale('ja')}>Switch JA</button>
-      <button onClick={() => setLocale('ar')}>Switch AR</button>
+      <button onClick={() => setLocale('de')}>Switch DE</button>
     </div>
   );
 }
@@ -79,7 +79,7 @@ describe('i18n Module', () => {
     expect(localStorage.getItem('timet_locale')).toBe('zh-CN');
   });
 
-  it('changes document direction when switching to RTL', () => {
+  it('sets document direction to ltr for all supported languages', () => {
     render(
       <I18nProvider>
         <TestComponent />
@@ -87,14 +87,14 @@ describe('i18n Module', () => {
     );
 
     act(() => {
-      screen.getByText('Switch AR').click();
+      screen.getByText('Switch DE').click();
     });
 
-    expect(screen.getByTestId('current-locale').textContent).toBe('ar');
-    expect(document.documentElement.dir).toBe('rtl');
+    expect(screen.getByTestId('current-locale').textContent).toBe('de');
+    expect(document.documentElement.dir).toBe('ltr');
   });
 
-  it('falls back to English copy for locales without custom overrides', () => {
+  it('provides translated kicker for German locale', () => {
     render(
       <I18nProvider>
         <TestComponent />
@@ -102,10 +102,10 @@ describe('i18n Module', () => {
     );
 
     act(() => {
-      screen.getByText('Switch AR').click();
+      screen.getByText('Switch DE').click();
     });
 
-    expect(screen.getByTestId('translated-kicker').textContent).toBe('TIME-TRAVEL STRATEGY ASSISTANT');
+    expect(screen.getByTestId('translated-kicker').textContent).toBe('STRATEGE FÜR ZEITREISENDE');
   });
 
   it('maps regional Chinese locales to the supported locale set', () => {
