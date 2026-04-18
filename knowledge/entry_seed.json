@@ -1,0 +1,576 @@
+{
+  "entries": [
+    {
+      "id": "zh-song-kaifeng-wealth",
+      "pack": "merchant-ascension",
+      "route": "wealth",
+      "title": "北宋汴京小本起家账房法",
+      "summary": "在北宋汴京这类高流通都市，最值钱的不是奇技淫巧，而是更稳的账、更快的周转和更能复购的小生意。",
+      "steps": [
+        "先选纸笔、针线、皂角、茶点这类高频货，不碰重资产大作坊。",
+        "先用固定标价和干净账本赢信用，再做赊销与熟客名单。",
+        "先靠客栈、码头、书坊和脚店找稳定客流，再谈扩张。"
+      ],
+      "contraindications": [
+        "不要一开局就吹大炼钢铁、蒸汽机这类跨时代神话。",
+        "不要把银钱全压在一票货上，更不要碰来路不明的官货。",
+        "不要让人觉得你像妖人或投机骗子。"
+      ],
+      "escalation": "当现金流稳定后，升级到批零结合、代记账和渠道分销。",
+      "tags": ["北宋", "汴京", "开封", "首富线", "小本生意", "账本", "渠道"],
+      "aliases": ["Northern Song", "Bianjing", "Kaifeng", "first fortune", "merchant line"],
+      "category": "首富线",
+      "region": ["汴京", "开封", "Kaifeng", "Bianjing"],
+      "eraLabel": "北宋 / Northern Song",
+      "socialFit": ["识字", "小商贩", "账房学徒", "literate drifter"],
+      "startingResources": ["一点碎银", "识字", "basic literacy", "little silver"],
+      "firstMoves": [
+        "先租最小摊位，做高频小货组合包。",
+        "先把账记得比同行清楚，把回头客认出来。",
+        "先结识一个愿意替你背书的掌柜或书吏。"
+      ],
+      "payoff": "三个月目标不是称霸全城，而是把你从街边小贩升级成有账、有熟客、有供货关系的准掌柜。",
+      "fatalMistakes": [
+        "别急着炫耀超时代知识。",
+        "别在没保护伞前碰盐、铁、军需这类高风险领域。"
+      ],
+      "coverStory": "自称跟过外地掌柜学过清账和定价，只是做事更细。",
+      "feasibility": "low_barrier",
+      "priority": 14,
+      "sourceId": "merchant-ladders",
+      "locale": "zh-CN",
+      "severity": "strategic"
+    },
+    {
+      "id": "en-song-kaifeng-wealth",
+      "pack": "merchant-ascension",
+      "route": "wealth",
+      "title": "Northern Song Market Ladder",
+      "summary": "In a city like Northern Song Kaifeng, the real edge is not a miracle invention. It is cleaner books, faster turnover, and trust in repeat daily goods.",
+      "steps": [
+        "Open with paper, needles, soap stock, tea snacks, or other fast-repeat goods instead of a heavy workshop.",
+        "Use fixed prices and visibly clean ledgers before you extend credit.",
+        "Anchor yourself near inns, book markets, docks, or busy alley commerce first."
+      ],
+      "contraindications": [
+        "Do not open with steam engines, firearms, or other impossible leaps.",
+        "Do not tie all capital into one shipment or touch controlled goods too early.",
+        "Do not sound like a prophet or an eccentric outsider."
+      ],
+      "escalation": "Once cash flow is stable, move into wholesale links, record keeping for others, and small credit.",
+      "tags": ["Northern Song", "Kaifeng", "Bianjing", "fortune line", "merchant", "ledger"],
+      "aliases": ["北宋", "汴京", "开封", "first fortune", "small trader"],
+      "category": "Fortune Line",
+      "region": ["Kaifeng", "Bianjing", "汴京", "开封"],
+      "eraLabel": "Northern Song / 北宋",
+      "socialFit": ["literate drifter", "small trader", "clerk", "识字"],
+      "startingResources": ["little silver", "basic literacy", "cheap stall", "few contacts"],
+      "firstMoves": [
+        "Rent the smallest viable stall and sell repeat-use bundles.",
+        "Keep books cleaner than rivals and identify repeat customers by name.",
+        "Win one credible backer such as a shopkeeper, broker, or clerk."
+      ],
+      "payoff": "The first win is not becoming the richest man alive. It is becoming the most orderly trader on your block, then buying better position from that base.",
+      "fatalMistakes": [
+        "Do not reveal future knowledge as magic.",
+        "Do not touch salt, iron, military, or tax-sensitive goods before you have cover."
+      ],
+      "coverStory": "Say you were trained by a traveling merchant who obsessed over clean books and reliable stock.",
+      "feasibility": "low_barrier",
+      "priority": 13,
+      "sourceId": "merchant-ladders",
+      "locale": "en",
+      "severity": "strategic"
+    },
+    {
+      "id": "zh-song-kaifeng-power",
+      "pack": "patronage-ladders",
+      "route": "power",
+      "title": "北宋汴京从账房到上位的阶梯",
+      "summary": "在汴京这种权力密集区，真正的上位不是先争名位，而是先变成某个强者离不开的账房、文书或耳目。",
+      "steps": [
+        "先去粮仓、税务、库房、书院、行会找最缺会算账和会写文书的位置。",
+        "先替人省钱、省麻烦、补漏洞，再慢慢掌握名单和消息。",
+        "先把自己做成可靠工具，再借人情往上换身份。"
+      ],
+      "contraindications": [
+        "不要过早站队到最显眼的派系。",
+        "不要把夺权野心挂在脸上。",
+        "不要在还没进核心圈前评价朝局。"
+      ],
+      "escalation": "掌握账目、人手与信息后，再争取推荐、官身或军需口。",
+      "tags": ["北宋", "汴京", "上位线", "书吏", "账房", "门路"],
+      "aliases": ["Northern Song power", "patronage ladder", "court rise"],
+      "category": "上位线",
+      "region": ["汴京", "开封", "Kaifeng", "Bianjing", "court", "capital"],
+      "eraLabel": "北宋 / Northern Song",
+      "socialFit": ["书吏", "识字", "账房", "门客", "literate clerk"],
+      "startingResources": ["识字", "会算账", "一点本钱", "basic literacy"],
+      "firstMoves": [
+        "先找一个缺文书和算账的人跟。",
+        "先做能立刻省钱省时的小改进。",
+        "先记住谁负责钱、粮、人和消息。"
+      ],
+      "payoff": "你真正的第一阶不是做官，而是先碰到账和名单；一旦你掌握这两样，地位会自己长出来。",
+      "fatalMistakes": [
+        "别急着谈治国大道理。",
+        "别在没有保荐时跨级表现。"
+      ],
+      "coverStory": "说自己出身寒门但跟过严厉先生，最擅长清账、抄录和补漏。",
+      "feasibility": "moderate",
+      "priority": 13,
+      "sourceId": "court-ladders",
+      "locale": "zh-CN",
+      "severity": "strategic"
+    },
+    {
+      "id": "en-song-kaifeng-power",
+      "pack": "patronage-ladders",
+      "route": "power",
+      "title": "Northern Song Patronage Ladder",
+      "summary": "In a capital like Kaifeng, the real rise-to-power line starts by becoming indispensable in ledgers, paperwork, logistics, and names before you ever reach office.",
+      "steps": [
+        "Move toward warehouses, tax offices, supply rooms, academies, or guild work where literate hands are scarce.",
+        "Save a patron money, embarrassment, or delay before you ask for rank.",
+        "Track who controls funds, grain, staffing, and introductions."
+      ],
+      "contraindications": [
+        "Do not rush into the most visible faction first.",
+        "Do not advertise ambition to rule.",
+        "Do not comment on high politics before you have cover."
+      ],
+      "escalation": "Once you control records, people, or flow of goods, trade usefulness for recommendation and office.",
+      "tags": ["Northern Song", "Kaifeng", "power line", "patronage", "clerk", "court"],
+      "aliases": ["北宋", "汴京", "court rise", "rise to power"],
+      "category": "Power Line",
+      "region": ["Kaifeng", "Bianjing", "汴京", "开封", "capital", "court"],
+      "eraLabel": "Northern Song / 北宋",
+      "socialFit": ["clerk", "scribe", "retainer", "literate drifter"],
+      "startingResources": ["basic literacy", "numeracy", "small silver", "clean handwriting"],
+      "firstMoves": [
+        "Attach yourself to whoever urgently needs books, copies, or logistics sorted.",
+        "Deliver one practical fix that saves time or leakage.",
+        "Map the chain of money, grain, and introductions."
+      ],
+      "payoff": "Power first flows through records and access. Office usually arrives after usefulness becomes painful to replace.",
+      "fatalMistakes": [
+        "Do not perform genius in public before you are protected.",
+        "Do not jump above your sponsor too early."
+      ],
+      "coverStory": "Present yourself as a disciplined low-born clerk trained to clean accounts and calm confusion.",
+      "feasibility": "moderate",
+      "priority": 12,
+      "sourceId": "court-ladders",
+      "locale": "en",
+      "severity": "strategic"
+    },
+    {
+      "id": "zh-late-qing-wealth",
+      "pack": "treaty-port",
+      "route": "wealth",
+      "title": "晚清通商口岸第一桶金路线",
+      "summary": "晚清上海这类通商口岸，最稳的首富线不是办大厂，而是先吃信息差、结算差和包装标准化的红利。",
+      "steps": [
+        "先做翻译、跑单、代记账、代采购这类轻资产服务。",
+        "先盯进口货、国货、行会价和码头价之间的价差。",
+        "先把包装、标签、账单和交货时间做得比别人稳定。"
+      ],
+      "contraindications": [
+        "不要一开始就重资产押厂房和机器。",
+        "不要碰鸦片、军火、走私这类最容易暴死的赛道。",
+        "不要同时得罪洋行、地痞和衙门。"
+      ],
+      "escalation": "当你掌握票据、客户和信誉后，再反向控制货源与分销。",
+      "tags": ["晚清", "上海", "通商口岸", "首富线", "商路", "套利", "票据"],
+      "aliases": ["Late Qing", "Shanghai", "treaty port", "fortune line", "small trader"],
+      "category": "首富线",
+      "region": ["上海", "Shanghai", "通商口岸", "treaty port", "port"],
+      "eraLabel": "晚清 / Late Qing",
+      "socialFit": ["小商人", "识字学徒", "买办跑腿", "small trader"],
+      "startingResources": ["一点碎银", "识字", "little silver", "basic literacy"],
+      "firstMoves": [
+        "先接最短链条的代办和撮合活。",
+        "先用可靠交货和清楚账单换口碑。",
+        "先锁定一个货类，再扩第二条线。"
+      ],
+      "payoff": "你的第一桶金来自周转速度和撮合费，不是来自空想中的工业帝国。",
+      "fatalMistakes": [
+        "别急着大规模借债。",
+        "别把未来市场趋势说得像天机。"
+      ],
+      "coverStory": "对外说自己只是更懂记账、交货和货样整理，不是通天奇才。",
+      "feasibility": "low_barrier",
+      "priority": 15,
+      "sourceId": "treaty-port-playbooks",
+      "locale": "zh-CN",
+      "severity": "strategic"
+    },
+    {
+      "id": "en-late-qing-wealth",
+      "pack": "treaty-port",
+      "route": "wealth",
+      "title": "Treaty Port First Fortune Line",
+      "summary": "In Late Qing Shanghai or any treaty port, the fastest realistic fortune line begins with brokerage, settlement discipline, and packaging consistency before heavy industry.",
+      "steps": [
+        "Start with translation, paperwork, sourcing, broker runs, or account handling instead of buying machines.",
+        "Exploit the spread between dock price, guild price, imported stock, and inland resale.",
+        "Make labels, invoices, delivery promises, and inventory discipline more reliable than your rivals."
+      ],
+      "contraindications": [
+        "Do not begin by sinking capital into a factory.",
+        "Do not touch opium, arms, or smuggling lanes unless you want short-term death or ruin.",
+        "Do not antagonize foreign firms, local muscle, and magistrates at the same time."
+      ],
+      "escalation": "After you own the customer relationship and paperwork flow, move upstream into supply and downstream into distribution.",
+      "tags": ["Late Qing", "Shanghai", "treaty port", "fortune line", "brokerage", "trade"],
+      "aliases": ["晚清", "上海", "通商口岸", "first fortune", "wealth and influence"],
+      "category": "Fortune Line",
+      "region": ["Shanghai", "上海", "treaty port", "port"],
+      "eraLabel": "Late Qing / 晚清",
+      "socialFit": ["small trader", "runner", "translator", "clerk"],
+      "startingResources": ["little silver", "basic literacy", "one contact", "nimble feet"],
+      "firstMoves": [
+        "Take the shortest commission work that teaches prices and trust chains.",
+        "Win one repeat client through clean delivery and cleaner books.",
+        "Own one product lane before you widen into a second."
+      ],
+      "payoff": "The first fortune comes from faster turnover and brokerage fees, not from instantly founding an empire.",
+      "fatalMistakes": [
+        "Do not lever up too early.",
+        "Do not speak about the future like prophecy."
+      ],
+      "coverStory": "Present yourself as a disciplined trade assistant who is unusually strict about books, labels, and timing.",
+      "feasibility": "low_barrier",
+      "priority": 15,
+      "sourceId": "treaty-port-playbooks",
+      "locale": "en",
+      "severity": "strategic"
+    },
+    {
+      "id": "zh-late-qing-power",
+      "pack": "patronage-ladders",
+      "route": "power",
+      "title": "晚清口岸从商人到上位者的转身",
+      "summary": "晚清口岸的上位线，不是先做大人物，而是先成为洋行、商帮、衙门和士绅之间的必经节点。",
+      "steps": [
+        "先掌握票据、货单、翻译、货运和税务流程。",
+        "先替一方解决别人解决不了的协同问题，再索取位置。",
+        "先结识会保你的人，再结识会用你的人。"
+      ],
+      "contraindications": [
+        "不要过早公开表态站队。",
+        "不要在没人担保时碰军政机密。",
+        "不要把自己包装成救世主。"
+      ],
+      "escalation": "当你能调度资金、消息和人脉时，影响力会先于正式名分到来。",
+      "tags": ["晚清", "上海", "上位线", "买办", "洋行", "士绅", "衙门"],
+      "aliases": ["Late Qing power", "patronage", "influence ladder", "court line"],
+      "category": "上位线",
+      "region": ["上海", "Shanghai", "通商口岸", "treaty port", "yamen", "guild"],
+      "eraLabel": "晚清 / Late Qing",
+      "socialFit": ["买办", "文书", "翻译", "商人", "broker"],
+      "startingResources": ["识字", "一点本钱", "几个联系人", "basic literacy"],
+      "firstMoves": [
+        "先把一条复杂流程跑顺。",
+        "先让关键人物省心，而不是先求头衔。",
+        "先记住谁能签字、谁能放货、谁能压事。"
+      ],
+      "payoff": "一旦你成了跨势力的翻译器和结算器，你就能从外围人变成牌桌上的常驻位置。",
+      "fatalMistakes": [
+        "别同时吃两家看不见的底牌。",
+        "别在羽翼未丰前公开议政。"
+      ],
+      "coverStory": "对外只说自己擅长账务、交涉和让复杂流程少出错。",
+      "feasibility": "moderate",
+      "priority": 14,
+      "sourceId": "court-ladders",
+      "locale": "zh-CN",
+      "severity": "strategic"
+    },
+    {
+      "id": "en-late-qing-power",
+      "pack": "patronage-ladders",
+      "route": "power",
+      "title": "Treaty Port Influence Ladder",
+      "summary": "The Late Qing power line in a treaty port begins when you become the necessary connector between firms, guilds, magistrates, and local prestige networks.",
+      "steps": [
+        "Master invoices, manifests, freight timing, translation, and tax handling first.",
+        "Solve one coordination problem that no faction can solve alone.",
+        "Find protectors before you seek titles."
+      ],
+      "contraindications": [
+        "Do not declare your faction too early.",
+        "Do not touch military or political secrets before you have backing.",
+        "Do not style yourself as a savior."
+      ],
+      "escalation": "Once money, information, and introductions run through you, influence arrives before formal rank.",
+      "tags": ["Late Qing", "Shanghai", "power line", "patronage", "guild", "magistrate"],
+      "aliases": ["晚清", "上海", "treaty port influence", "rise to power", "influence"],
+      "category": "Power Line",
+      "region": ["Shanghai", "上海", "treaty port", "port", "guild", "yamen"],
+      "eraLabel": "Late Qing / 晚清",
+      "socialFit": ["broker", "translator", "trade clerk", "runner"],
+      "startingResources": ["basic literacy", "small capital", "some introductions", "mobility"],
+      "firstMoves": [
+        "Untangle one messy process from contract to payment.",
+        "Make a strong patron more efficient before you ask for elevation.",
+        "Map who can sign, release, delay, or protect."
+      ],
+      "payoff": "When several factions need you to understand one another, you stop being expendable and start becoming political furniture.",
+      "fatalMistakes": [
+        "Do not play double games you cannot hide.",
+        "Do not speak like a statesman before you are shielded."
+      ],
+      "coverStory": "Describe yourself as a practical fixer for books, negotiation, and timing, not a visionary operator.",
+      "feasibility": "moderate",
+      "priority": 14,
+      "sourceId": "court-ladders",
+      "locale": "en",
+      "severity": "strategic"
+    },
+    {
+      "id": "zh-modern-edge",
+      "pack": "modern-edge",
+      "route": "tech",
+      "title": "能落地的现代知识外挂",
+      "summary": "真正好用的现代外挂，往往不是大发明，而是账本模板、标准化工序、包装、标签、抽检和交付纪律。",
+      "steps": [
+        "先挑低门槛工艺，例如肥皂、印刷、包装、发酵、仓储、度量统一。",
+        "先把步骤写成谁都能照做的流程，不靠你亲自盯。",
+        "先卖更稳定、更省料、更少返工，而不是卖未来神话。"
+      ],
+      "contraindications": [
+        "不要上来就谈蒸汽机、机床体系和跨时代重工业。",
+        "不要在材料链没打通前承诺产量。",
+        "不要让人知道你的方法远超时代常识。"
+      ],
+      "escalation": "先用轻工业和管理外挂挣钱，再慢慢推进更重的制造路线。",
+      "tags": ["现代知识外挂", "工艺", "印刷", "肥皂", "标准化", "组织"],
+      "aliases": ["modern edge", "technology", "standardization", "process"],
+      "category": "现代知识外挂",
+      "region": ["港口", "口岸", "上海", "London", "port", "city", "capital"],
+      "eraLabel": "前工业到近代 / Preindustrial to Early Industrial",
+      "socialFit": ["识字", "工坊学徒", "小商人", "clerk", "artisan"],
+      "startingResources": ["一点本钱", "识字", "few tools", "basic literacy"],
+      "firstMoves": [
+        "先做一本标准账册和交货表。",
+        "先挑一个能马上降低返工率的流程。",
+        "先把结果卖给最在意稳定性的客户。"
+      ],
+      "payoff": "最稳的外挂收益，是别人开始依赖你的标准和流程，而不是依赖你的单次灵感。",
+      "fatalMistakes": [
+        "别把技术说成神授。",
+        "别在工艺没跑稳前扩大规模。"
+      ],
+      "coverStory": "说自己只是把师傅们零散经验整理成更不容易出错的做法。",
+      "feasibility": "low_barrier",
+      "priority": 13,
+      "sourceId": "modern-edge",
+      "locale": "zh-CN",
+      "severity": "strategic"
+    },
+    {
+      "id": "en-modern-edge",
+      "pack": "modern-edge",
+      "route": "tech",
+      "title": "Modern Edge That Can Actually Land",
+      "summary": "The best modern edge is usually not a grand invention. It is the stack of ledgers, standards, packaging, inspection, process notes, and delivery discipline.",
+      "steps": [
+        "Choose low-barrier gains first: soap, printing, packaging, fermentation, warehousing, accounting, or standardized measures.",
+        "Write the method so ordinary workers can repeat it without your constant supervision.",
+        "Sell fewer defects, steadier quality, and cleaner delivery instead of miracle language."
+      ],
+      "contraindications": [
+        "Do not open with steam engines, precision machine tools, or impossible heavy industry.",
+        "Do not promise output before the material chain exists.",
+        "Do not let people conclude that your knowledge is unnatural."
+      ],
+      "escalation": "Use light-industry and management wins to finance heavier manufacturing later.",
+      "tags": ["modern edge", "technology", "standardization", "printing", "soap", "process"],
+      "aliases": ["现代知识外挂", "工艺", "tech line", "low barrier industry"],
+      "category": "Modern Edge",
+      "region": ["port", "city", "capital", "Shanghai", "London", "上海"],
+      "eraLabel": "Preindustrial to Early Industrial / 前工业到近代",
+      "socialFit": ["clerk", "artisan", "small trader", "literate worker"],
+      "startingResources": ["small capital", "basic literacy", "cheap tools", "repeat customers"],
+      "firstMoves": [
+        "Create one standard ledger and one delivery checklist.",
+        "Pick one process improvement that visibly reduces waste.",
+        "Sell the result to buyers who value consistency most."
+      ],
+      "payoff": "The durable gain comes when others depend on your system, not just your individual brilliance.",
+      "fatalMistakes": [
+        "Do not describe technique as divine revelation.",
+        "Do not scale before the process is stable."
+      ],
+      "coverStory": "Say you are simply good at organizing scattered workshop wisdom into repeatable routines.",
+      "feasibility": "low_barrier",
+      "priority": 13,
+      "sourceId": "modern-edge",
+      "locale": "en",
+      "severity": "strategic"
+    },
+    {
+      "id": "zh-arrival-survival",
+      "pack": "arrival-survival",
+      "route": "survival",
+      "title": "刚穿过去先别显圣",
+      "summary": "多数穿越者最先死的不是没本事，而是说错话、行错礼、银钱单位弄错，像个来历不明的怪人。",
+      "steps": [
+        "先学称呼、口音、钱币、地名和常见礼节。",
+        "先观察别人怎么穿、怎么行礼、怎么讨价还价，再模仿。",
+        "先给自己编一条稳定来路，只讲七分，不讲十成。"
+      ],
+      "contraindications": [
+        "不要主动提未来、科技树和历史走向。",
+        "不要一上来就显得比当地读书人还懂天下。",
+        "不要随便碰禁忌职业、宗教和礼法。"
+      ],
+      "escalation": "先像当地人，再像有用的人，最后才像不能轻易得罪的人。",
+      "tags": ["避坑线", "刚穿越", "藏锋", "礼法", "口音", "身份"],
+      "aliases": ["fatal mistakes", "blend in", "cover story", "arrival survival"],
+      "category": "避坑线",
+      "region": ["capital", "port", "frontier", "county", "city", "京城", "港口", "边镇"],
+      "eraLabel": "通用历史场景 / General Historical",
+      "socialFit": ["陌生人", "流民", "落魄读书人", "drifter"],
+      "startingResources": ["空手", "一点碎银", "few coins", "no backing"],
+      "firstMoves": [
+        "先学钱和称呼。",
+        "先抄习惯，不要急着秀见识。",
+        "先编一个别人愿意信的来历。"
+      ],
+      "payoff": "只要前三天不穿帮，你就有机会把异常变成优势，而不是把优势变成死因。",
+      "fatalMistakes": [
+        "别自称天命之人。",
+        "别让人觉得你像细作、邪人或疯子。"
+      ],
+      "coverStory": "优先选择外地学徒、落魄亲戚、逃荒后投亲这类普通而可查得不深的身份。",
+      "feasibility": "low_barrier",
+      "priority": 12,
+      "sourceId": "arrival-survival",
+      "locale": "zh-CN",
+      "severity": "strategic"
+    },
+    {
+      "id": "en-arrival-survival",
+      "pack": "arrival-survival",
+      "route": "survival",
+      "title": "Do Not Arrive Like a Miracle",
+      "summary": "Most time travelers die first because they speak wrong, bow wrong, price wrong, and look like an unexplained anomaly.",
+      "steps": [
+        "Learn forms of address, money units, place names, and visible etiquette first.",
+        "Watch how people dress, bargain, and greet before you try to impress them.",
+        "Build a stable origin story and only tell seven parts of ten."
+      ],
+      "contraindications": [
+        "Do not volunteer future history or a technology tree.",
+        "Do not sound more informed than the local educated class on day one.",
+        "Do not trip religious, legal, or ritual taboos casually."
+      ],
+      "escalation": "Look local first, useful second, and formidable only much later.",
+      "tags": ["survival", "fatal mistakes", "blend in", "cover story", "arrival"],
+      "aliases": ["避坑线", "藏锋", "just arrived", "blend fast"],
+      "category": "Fatal Mistakes",
+      "region": ["capital", "port", "frontier", "county", "city", "港口", "边镇"],
+      "eraLabel": "General Historical / 通用历史场景",
+      "socialFit": ["drifter", "outsider", "poor clerk", "refugee"],
+      "startingResources": ["few coins", "no backing", "plain clothes", "basic literacy"],
+      "firstMoves": [
+        "Learn money and titles first.",
+        "Imitate before you display knowledge.",
+        "Pick one ordinary backstory and repeat it consistently."
+      ],
+      "payoff": "If you survive the first three days without looking uncanny, your anomaly can become leverage instead of a death sentence.",
+      "fatalMistakes": [
+        "Do not claim divine destiny.",
+        "Do not look like a spy, cultist, or madman."
+      ],
+      "coverStory": "Use an ordinary identity such as a distant apprentice, displaced relative, or poor traveler with a thin but believable background.",
+      "feasibility": "low_barrier",
+      "priority": 12,
+      "sourceId": "arrival-survival",
+      "locale": "en",
+      "severity": "strategic"
+    },
+    {
+      "id": "zh-visual-clue",
+      "pack": "visual-clues",
+      "route": "visual_help",
+      "title": "钱币文字器物线索速查",
+      "summary": "看到钱币、文字、衣料、印章和器物时，不要急着下结论，先抓最能暴露时代、地域和身份的硬线索。",
+      "steps": [
+        "先看材质、边缘磨损、铸造或印刷方式。",
+        "再看字形、称谓、年号、徽记和纹样。",
+        "最后看谁会携带这东西，它更像市井货、官用物还是宗教物。"
+      ],
+      "contraindications": [
+        "不要只凭一个字就断言朝代。",
+        "不要把现代修复痕迹当原始时代特征。"
+      ],
+      "escalation": "把看到的线索继续拆成材质、文字、用途和佩戴者四类，再回来问 Timet。",
+      "tags": ["视觉线索", "钱币", "文字", "器物", "印章", "服饰"],
+      "aliases": ["visual clues", "scan coin", "script", "artifact", "coin"],
+      "category": "视觉线索",
+      "region": ["coin", "script", "seal", "artifact", "money", "文字", "器物"],
+      "eraLabel": "线索扫描 / Visual Clues",
+      "socialFit": ["任何人"],
+      "startingResources": ["一张照片", "a photo"],
+      "firstMoves": [
+        "先截取最清楚的局部。",
+        "先数重复出现的符号和称谓。",
+        "先判断它是流通物还是身份物。"
+      ],
+      "payoff": "你不一定立刻知道准确年份，但可以先排除大半错误时代和错误身份。",
+      "fatalMistakes": [
+        "别只凭模糊轮廓就下注。",
+        "别忽略持有者身份线索。"
+      ],
+      "coverStory": "对外只说你在帮人辨认旧物，不要说你靠它判断天下格局。",
+      "feasibility": "low_barrier",
+      "priority": 11,
+      "sourceId": "visual-clue-fieldbook",
+      "locale": "zh-CN",
+      "severity": "strategic"
+    },
+    {
+      "id": "en-visual-clue",
+      "pack": "visual-clues",
+      "route": "visual_help",
+      "title": "Coin, Script, and Artifact Clue Pass",
+      "summary": "When you see a coin, script sample, seal, textile, or tool, do not jump to the dynasty first. Start with the hardest clues for era, region, and social rank.",
+      "steps": [
+        "Check material, edge wear, casting or printing method first.",
+        "Then check script form, titles, reign markers, badges, and repeating motifs.",
+        "Finally ask who would carry it: common trade, official issue, military, temple, or household use."
+      ],
+      "contraindications": [
+        "Do not date an object from one character alone.",
+        "Do not mistake modern repair marks for original period traits."
+      ],
+      "escalation": "Break the clue into material, script, function, and owner class, then ask Timet again with those four buckets.",
+      "tags": ["visual clues", "coin", "script", "artifact", "seal", "garment"],
+      "aliases": ["视觉线索", "扫描钱币", "tool scan", "insignia", "artifact"],
+      "category": "Visual Clues",
+      "region": ["coin", "script", "seal", "artifact", "money", "tool"],
+      "eraLabel": "Visual Clues / 线索扫描",
+      "socialFit": ["anyone"],
+      "startingResources": ["a photo", "one clear detail shot"],
+      "firstMoves": [
+        "Crop the sharpest detail first.",
+        "Count repeated symbols, titles, and motifs.",
+        "Decide whether the object signals trade, office, religion, or rank."
+      ],
+      "payoff": "You may not know the exact year yet, but you can quickly eliminate the wrong era and the wrong social layer.",
+      "fatalMistakes": [
+        "Do not bet everything on a blurry silhouette.",
+        "Do not ignore who would normally own the object."
+      ],
+      "coverStory": "Say you are trying to identify an old item, not reading the whole political order from it.",
+      "feasibility": "low_barrier",
+      "priority": 11,
+      "sourceId": "visual-clue-fieldbook",
+      "locale": "en",
+      "severity": "strategic"
+    }
+  ]
+}

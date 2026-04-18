@@ -1,0 +1,52 @@
+{
+  "sources": [
+    {
+      "id": "merchant-ladders",
+      "authority": "Timet Curated Pack",
+      "title": "Mercantile Ladders",
+      "finalUrl": "https://timet.local/packs/merchant-ladders",
+      "pack": "merchant-ascension",
+      "license": "Curated fictional-historical strategy pack"
+    },
+    {
+      "id": "court-ladders",
+      "authority": "Timet Curated Pack",
+      "title": "Court and Patronage Ladders",
+      "finalUrl": "https://timet.local/packs/court-ladders",
+      "pack": "patronage-ladders",
+      "license": "Curated fictional-historical strategy pack"
+    },
+    {
+      "id": "arrival-survival",
+      "authority": "Timet Curated Pack",
+      "title": "Arrival Survival Protocols",
+      "finalUrl": "https://timet.local/packs/arrival-survival",
+      "pack": "arrival-survival",
+      "license": "Curated fictional-historical strategy pack"
+    },
+    {
+      "id": "modern-edge",
+      "authority": "Timet Curated Pack",
+      "title": "Modern Edge That Actually Lands",
+      "finalUrl": "https://timet.local/packs/modern-edge",
+      "pack": "modern-edge",
+      "license": "Curated fictional-historical strategy pack"
+    },
+    {
+      "id": "treaty-port-playbooks",
+      "authority": "Timet Curated Pack",
+      "title": "Treaty Port Acceleration Playbooks",
+      "finalUrl": "https://timet.local/packs/treaty-port",
+      "pack": "treaty-port",
+      "license": "Curated fictional-historical strategy pack"
+    },
+    {
+      "id": "visual-clue-fieldbook",
+      "authority": "Timet Curated Pack",
+      "title": "Coins, Script, and Rank Markers",
+      "finalUrl": "https://timet.local/packs/visual-clues",
+      "pack": "visual-clues",
+      "license": "Curated fictional-historical strategy pack"
+    }
+  ]
+}
