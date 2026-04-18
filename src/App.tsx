@@ -295,7 +295,7 @@ export default function App() {
       categoryHint: CANONICAL_ROUTE_HINTS.WEALTH,
       userText: locale.startsWith('zh')
         ? '我在北宋汴京，识字，有一点碎银，怎么三个月赚到第一桶金？'
-        : 'Northern Song Kaifeng, literate, little silver, how do I make my first fortune in 90 days?',
+        : 'Regency London, literate clerk, a few guineas, how do I build my first fortune in 90 days?',
     },
     {
       label: t('route.power.label'),
@@ -304,7 +304,7 @@ export default function App() {
       categoryHint: CANONICAL_ROUTE_HINTS.POWER,
       userText: locale.startsWith('zh')
         ? '我在晚清上海通商口岸，给商号跑单，怎样先结交靠山再上位？'
-        : 'Late Qing treaty port, I run papers for a trading house. How do I gain influence without getting crushed?',
+        : 'Tudor London, I serve in a noble household. How do I gain influence without getting crushed?',
     },
     {
       label: t('route.survival.label'),
@@ -313,7 +313,7 @@ export default function App() {
       categoryHint: CANONICAL_ROUTE_HINTS.SURVIVAL,
       userText: locale.startsWith('zh')
         ? '我在南宋临安，刚到陌生城里，没有靠山，最先不能暴露什么？'
-        : 'I just arrived in medieval Venice with no backing. What must I hide first to blend in?',
+        : 'I just arrived in medieval London with no patron. What must I hide first to blend in?',
     },
     {
       label: t('route.tech.label'),
@@ -322,7 +322,7 @@ export default function App() {
       categoryHint: CANONICAL_ROUTE_HINTS.TECH,
       userText: locale.startsWith('zh')
         ? '我在晚清上海，有一点本钱，哪些现代知识最先能变成真钱？'
-        : 'Late Qing Shanghai with a little capital. Which modern methods can I turn into money first?',
+        : 'Victorian London, a little capital. Which modern methods can I turn into real money first?',
     },
   ], [locale, t]);
 

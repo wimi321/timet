@@ -47,7 +47,7 @@ describe('MockBeaconBridge', () => {
     const bridge = createMockBeaconBridge();
     await bridge.setPowerMode('doomsday');
     await bridge.triage({
-      userText: 'Late Qing Shanghai, little silver, what is my first fortune line?',
+      userText: 'Regency London, a few guineas, what is my first fortune line?',
       powerMode: 'doomsday',
       locale: 'en',
       sessionId: 'mock-battery',

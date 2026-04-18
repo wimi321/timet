@@ -31,9 +31,9 @@ const GROUNDING_SUMMARY_CHARS = 168;
 const GROUNDING_STEP_CHARS = 104;
 
 const ERA_PATTERN =
-  /(北宋|南宋|宋朝|唐朝|明朝|明末|晚明|清朝|晚清|汉朝|漢朝|秦朝|隋唐|战国|戰國|春秋|民国|民國|维多利亚|維多利亞|罗马|羅馬|拜占庭|Byzantine|Roman|Tang|Song|Ming|Qing|Han|Edo|Tokugawa|Victorian|late qing|early modern|medieval|renaissance|industrial|colonial|republic|empire|kingdom|dynasty|18\\d{2}|19\\d{2}|20\\d{2})/i;
+  /(北宋|南宋|宋朝|唐朝|明朝|明末|晚明|清朝|晚清|汉朝|漢朝|秦朝|隋唐|战国|戰國|春秋|民国|民國|维多利亚|維多利亞|罗马|羅馬|拜占庭|Byzantine|Roman|Tang|Song|Ming|Qing|Han|Edo|Tokugawa|Victorian|Regency|Georgian|Tudor|Elizabethan|Restoration|Stuart|late qing|early modern|medieval|renaissance|industrial|colonial|republic|empire|kingdom|dynasty|18\\d{2}|19\\d{2}|20\\d{2})/i;
 const PLACE_PATTERN =
-  /(汴京|东京|東京|开封|開封|临安|臨安|长安|長安|洛阳|洛陽|江南|苏州|蘇州|杭州|扬州|揚州|广州|廣州|上海|南京|京城|港口|边镇|邊鎮|London|Paris|Rome|Venice|Florence|Constantinople|Istanbul|Kaifeng|Hangzhou|Suzhou|Shanghai|Nanjing|Kyoto|Edo|port|treaty port|capital|frontier|county|city|court)/i;
+  /(汴京|东京|東京|开封|開封|临安|臨安|长安|長安|洛阳|洛陽|江南|苏州|蘇州|杭州|扬州|揚州|广州|廣州|上海|南京|京城|港口|边镇|邊鎮|London|Paris|Rome|Venice|Florence|Constantinople|Istanbul|Kaifeng|Hangzhou|Suzhou|Shanghai|Nanjing|Kyoto|Edo|Edinburgh|Manchester|York|Bristol|Glasgow|Oxford|Cambridge|Scotland|Highlands|England|Britain|New York|Boston|Philadelphia|port|treaty port|capital|frontier|county|city|court)/i;
 const LOW_RESOURCE_PATTERN =
   /(一点|一點|少量|little|small|basic|只有|只剩|碎银|碎銀|small trader|little silver|few coins|no backing|寒门|寒門|poor|broke)/i;
 
@@ -41,7 +41,7 @@ const ROUTE_SIGNAL_PATTERNS: Record<Exclude<RouteHint, 'visual_help'>, RegExp> =
   wealth:
     /(首富|发财|發財|赚钱|賺錢|生意|买卖|買賣|商路|货栈|貨棧|套利|账本|帳本|merchant|trade|profit|fortune|rich|business|pricing|ledger|brand|channel)/i,
   power:
-    /(上位|掌权|掌權|称王|稱王|皇帝|摄政|攝政|官场|官場|宫廷|宮廷|权臣|權臣|门客|門客|派系|朝堂|court|faction|office|patronage|throne|rule|power|governance|legitimacy)/i,
+    /(上位|掌权|掌權|称王|稱王|皇帝|摄政|攝政|官场|官場|宫廷|宮廷|权臣|權臣|门客|門客|派系|朝堂|court|faction|office|patronage|patron|household|influence|climb|throne|rule|power|governance|legitimacy)/i,
   survival:
     /(保命|活下来|活下來|避坑|藏锋|藏鋒|别暴露|別暴露|融入|礼法|禮法|口音|习俗|習俗|blend in|fatal mistake|custom|etiquette|cover story|suspicion)/i,
   tech:
@@ -415,8 +415,8 @@ function buildClarifierResponse(request: TriageRequest, evidence: EvidenceBundle
           '最后补上身份、手里有什么、你要首富线还是上位线。',
         ]
       : [
-          'Tell me the era first: Northern Song, Late Qing, Victorian Britain, and so on.',
-          'Then tell me the place: Kaifeng, Jiangnan, Shanghai, London, a port, a frontier town, and so on.',
+          'Tell me the era first: medieval England, Tudor London, Regency Britain, Victorian London, and so on.',
+          'Then tell me the place: London, Edinburgh, the Highlands, a port, a frontier town, and so on.',
           'Then add your identity, starting resources, and whether you want the fortune line or the power line.',
         ],
     mainPath: locale?.startsWith('zh')

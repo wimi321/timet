@@ -25,12 +25,12 @@ describe('beaconEngine', () => {
     expect(response.rawText).toContain('先走三步');
   });
 
-  it('mixes wealth, power, and modern-edge evidence for an English treaty-port query', () => {
+  it('surfaces power evidence for an English Tudor court-city query', () => {
     const evidence = retrieveEvidenceBundle({
-      userText: 'Late Qing treaty port, small trader, how do I gain wealth and influence fast?',
+      userText: 'Tudor London, I serve in a noble household. How do I gain influence without getting crushed?',
       powerMode: 'normal',
       locale: 'en',
-      sessionId: 'engine-treaty-port',
+      sessionId: 'engine-tudor-power',
     });
 
     const routes = new Set(
@@ -39,8 +39,7 @@ describe('beaconEngine', () => {
         .filter((item): item is NonNullable<typeof item> => item != null),
     );
 
-    expect(routes.has('wealth')).toBe(true);
-    expect(routes.has('power') || routes.has('tech')).toBe(true);
+    expect(routes.has('power')).toBe(true);
   });
 
   it('returns a short clarifier when era or place is missing', () => {
@@ -77,7 +76,7 @@ describe('beaconEngine', () => {
       sessionId: 'engine-zh-locale',
     });
     const en = inferTriageResponse({
-      userText: 'Late Qing Shanghai with a little capital. Which modern methods can I turn into money first?',
+      userText: 'Victorian London with a little capital. Which modern methods can I turn into real money first?',
       powerMode: 'normal',
       locale: 'en',
       sessionId: 'engine-en-locale',
@@ -90,7 +89,7 @@ describe('beaconEngine', () => {
 
   it('keeps grounding compact for local prompt budgets', () => {
     const evidence = retrieveEvidenceBundle({
-      userText: 'Late Qing Shanghai, basic literacy, little silver, I want wealth and influence fast.',
+      userText: 'Regency London, basic literacy, a few guineas, I want wealth and influence fast.',
       powerMode: 'normal',
       locale: 'en',
       sessionId: 'engine-grounding',

@@ -147,7 +147,7 @@ describe('CapacitorBeaconBridge', () => {
     const chunks: Array<{ delta: string; done?: boolean; finalSummary?: string }> = [];
 
     for await (const chunk of bridge.triageStream({
-      userText: 'Late Qing treaty port, small trader, how do I gain wealth fast?',
+      userText: 'Regency London, junior clerk, how do I gain wealth fast?',
       powerMode: 'normal',
       locale: 'en',
       sessionId: 'stream-test-session',
@@ -224,7 +224,7 @@ describe('CapacitorBeaconBridge', () => {
 
     const bridge = createCapacitorBeaconBridge();
     const response = await bridge.triage({
-      userText: 'Late Qing Shanghai, little silver, what is my first fortune line?',
+      userText: 'Regency London, a few guineas, what is my first fortune line?',
       powerMode: 'normal',
       locale: 'en',
       sessionId: 'localized-disclaimer-session',
@@ -255,7 +255,7 @@ describe('CapacitorBeaconBridge', () => {
     let finalResponse: TriageResponse | undefined;
 
     for await (const chunk of bridge.triageStream({
-      userText: 'Northern Song Kaifeng, literate, little silver, what is my first path?',
+      userText: 'Victorian London, literate, a little capital, what is my first path?',
       powerMode: 'normal',
       locale: 'en',
       sessionId: 'final-text-session',

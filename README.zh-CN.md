@@ -83,10 +83,10 @@ Timet 最适合的问题格式：
 
 | 路线 | 中文示例 | 英文示例 |
 | --- | --- | --- |
-| `首富线` | `我在北宋汴京，识字，有一点碎银，怎么三个月赚到第一桶金？` | `Northern Song Kaifeng, literate, little silver, how do I make my first fortune in 90 days?` |
-| `上位线` | `我在晚清上海通商口岸，给商号跑单，怎样先结交靠山再上位？` | `Late Qing treaty port, I run papers for a trading house. How do I gain influence without getting crushed?` |
-| `避坑线` | `我在南宋临安，刚到陌生城里，没有靠山，最先不能暴露什么？` | `I just arrived in a medieval city with no backing. What must I hide first to blend in?` |
-| `现代知识外挂` | `我在晚清上海，有一点本钱，哪些现代知识最先能变成真钱？` | `Late Qing Shanghai with a little capital. Which modern methods can I turn into money first?` |
+| `首富线` | `我在北宋汴京，识字，有一点碎银，怎么三个月赚到第一桶金？` | `Regency London, literate clerk, a few guineas, how do I build my first fortune in 90 days?` |
+| `上位线` | `我在晚清上海通商口岸，给商号跑单，怎样先结交靠山再上位？` | `Tudor London, I serve in a noble household. How do I gain influence without getting crushed?` |
+| `避坑线` | `我在南宋临安，刚到陌生城里，没有靠山，最先不能暴露什么？` | `I just arrived in medieval London with no patron. What must I hide first to blend in?` |
+| `现代知识外挂` | `我在晚清上海，有一点本钱，哪些现代知识最先能变成真钱？` | `Victorian London, a little capital. Which modern methods can I turn into real money first?` |
 
 ## 回答契约
 
