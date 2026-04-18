@@ -29,6 +29,12 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/wimi321/timet/releases/latest/download/timet-0.1.1-arm64.apk">
+    <img alt="Download APK" src="https://img.shields.io/badge/Download%20APK-arm64-2ea44f?style=for-the-badge&logo=android&logoColor=white">
+  </a>
+</p>
+
+<p align="center">
   <a href="./README.md">English</a>
   ·
   <a href="./README.zh-CN.md">简体中文</a>
