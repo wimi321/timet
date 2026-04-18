@@ -17,6 +17,14 @@
 </p>
 
 <p align="center">
+  <img alt="React" src="https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=white">
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white">
+  <img alt="Vite" src="https://img.shields.io/badge/Vite-8-646CFF?style=flat-square&logo=vite&logoColor=white">
+  <img alt="Capacitor" src="https://img.shields.io/badge/Capacitor-8-119EFF?style=flat-square&logo=capacitor&logoColor=white">
+  <img alt="Dart" src="https://img.shields.io/badge/Dart-3.4-0175C2?style=flat-square&logo=dart&logoColor=white">
+</p>
+
+<p align="center">
   <strong>An app for time travelers.</strong>
 </p>
 
@@ -38,9 +46,7 @@
   <img src="./docs/assets/timet-hero.svg" alt="Timet hero" width="100%">
 </p>
 
-Timet is a multilingual, offline-first app built for time travelers dropped into historical or fictional worlds.
-You describe the era, place, identity, starting resources, and goal.
-Timet answers like a sharp strategist with practical routes for wealth, influence, cover, and realistic modern-edge leverage.
+Tell Timet the **era**, **place**, **identity**, **starting resources**, and **goal** — it drafts a playable strategy route for wealth, influence, cover, or modern-edge leverage. No lore dumps, no hand-waving. Every answer lands in a **structured five-part brief** you can act on immediately.
 
 ## Product Preview
 
@@ -65,44 +71,45 @@ Timet answers like a sharp strategist with practical routes for wealth, influenc
   </tr>
 </table>
 
-## Why Timet
+## Features
 
-- Route-first, not lore-first. It gives you a playable path, not a wall of background trivia.
-- Chinese and English first. The core UX and prompt examples are written for both.
-- Deliberately no era picker and no fake era detection. You state the board yourself.
-- Structured answers. Timet always converges on a five-part answer shape.
-- Offline-first shell. The app keeps local model and bundled knowledge support at the center of the product.
+- **Route-first, not lore-first** — Timet gives you a playable path, not a wall of background trivia.
+- **Structured answers** — Every reply converges on five sections: situation read, first moves, main path, fatal mistakes, and next question.
+- **Offline-first architecture** — Bundled knowledge packs and on-device model support. No server required.
+- **20 languages** — Chinese and English deep-adapted; 18 more languages fully supported.
+- **On-device AI** — Runs Gemma 4 locally via LiteRT on mobile. Your data stays on your device.
+- **Cross-platform** — One codebase ships to Web, Android, and iOS via Capacitor.
 
-## Prompt Contract
+## How It Works
 
-Timet works best when the question includes:
+**Input formula:**
 
 `era + place + identity + resources + goal`
 
-### Example prompts
+**Example prompts:**
 
-| Route | Chinese | English |
-| --- | --- | --- |
-| Fortune Line | `我在北宋汴京，识字，有一点碎银，怎么三个月赚到第一桶金？` | `Regency London, literate clerk, a few guineas, how do I build my first fortune in 90 days?` |
-| Power Line | `我在晚清上海通商口岸，给商号跑单，怎样先结交靠山再上位？` | `Tudor London, I serve in a noble household. How do I gain influence without getting crushed?` |
-| Fatal Mistakes | `我在南宋临安，刚到陌生城里，没有靠山，最先不能暴露什么？` | `I just arrived in medieval London with no patron. What must I hide first to blend in?` |
-| Modern Edge | `我在晚清上海，有一点本钱，哪些现代知识最先能变成真钱？` | `Victorian London, a little capital. Which modern methods can I turn into real money first?` |
+| Route | Prompt |
+| --- | --- |
+| Fortune Line | `我在北宋汴京，识字，有一点碎银，怎么三个月赚到第一桶金？` |
+| Fortune Line | `Regency London, literate clerk, a few guineas, how do I build my first fortune in 90 days?` |
+| Power Line | `Tudor London, I serve in a noble household. How do I gain influence without getting crushed?` |
+| Fatal Mistakes | `I just arrived in medieval London with no patron. What must I hide first to blend in?` |
 
-## Answer Contract
+**Answer shape — every response follows this contract:**
 
-Every core answer is shaped into five sections:
+1. **Current Read** — assess the board before you move
+2. **First Three Moves** — low-barrier, repeatable first steps
+3. **Riches / Power Path** — the main climb
+4. **Do Not Expose** — what will get you killed or exiled
+5. **Ask Me Next** — break the route into 7 / 30 / 90-day phases
 
-1. `Current Read`
-2. `First Three Moves`
-3. `Riches / Power Path`
-4. `Do Not Expose`
-5. `Ask Me Next`
-
-Example:
+<details>
+<summary>Full answer example</summary>
 
 ```text
 Current Read
-You are in a high-circulation city with low starting capital, which means trust and turnover matter more than miracle inventions.
+You are in a high-circulation city with low starting capital,
+which means trust and turnover matter more than miracle inventions.
 
 First Three Moves
 1. Start with repeat-demand goods or services.
@@ -110,7 +117,8 @@ First Three Moves
 3. Anchor near inns, docks, guild traffic, or literate commerce.
 
 Riches / Power Path
-Stabilize cash flow first, then use paperwork, brokerage, supply discipline, or patronage to climb.
+Stabilize cash flow first, then use paperwork, brokerage,
+supply discipline, or patronage to climb.
 
 Do Not Expose
 Do not sound supernatural, over-informed, or culturally wrong too early.
@@ -119,6 +127,8 @@ Ask Me Next
 Break this route into 7-day, 30-day, and 90-day phases.
 ```
 
+</details>
+
 ## Core Routes
 
 | Route | What it does | Best used for |
@@ -126,58 +136,69 @@ Break this route into 7-day, 30-day, and 90-day phases.
 | `Fortune Line` | Finds the fastest realistic path to your first durable cash flow. | Trade, brokerage, ledgers, small goods, repeat demand |
 | `Power Line` | Maps how to become useful before becoming visible. | Patronage, office, clerical leverage, court or military adjacency |
 | `Fatal Mistakes` | Tells you what not to reveal before you understand the local rules. | Arrival cover, etiquette, speech, customs, identity protection |
-| `Modern Edge` | Downgrades modern knowledge into era-appropriate advantages. | Process, packaging, standardization, practical workshop or business upgrades |
+| `Modern Edge` | Downgrades modern knowledge into era-appropriate advantages. | Process, packaging, standardization, practical workshop upgrades |
 | `Visual Clues` | Uses visible objects as context and tells you what to ask next. | Coins, seals, script, garments, printed matter, artifacts |
 
-## Product Principles
+## Getting Started
 
-- No bluffing when era or place is missing.
-- Wealth first by default, power only when explicitly requested.
-- No impossible industrial leaps in low-resource settings.
-- Strong strategist tone, but always anchored to executable steps.
-- Historical or fictional context is the product frame, not a license for real-world harm advice.
-
-## Quickstart
+**Prerequisites:** Node.js >= 20 · Dart >= 3.4
 
 ```bash
+# Install and build knowledge pack
 npm install
 npm run knowledge:build
+
+# Start dev server
 npm run dev
-```
 
-Verification:
+# Run tests
+npm test && dart test
 
-```bash
-npm test
-dart test
+# Production build
 npm run build
 ```
 
-Mobile shell helpers:
+**Mobile (requires Xcode / Android Studio):**
 
 ```bash
-npm run mobile:android
 npm run mobile:ios
+npm run mobile:android
 ```
+
+## Tech Stack
+
+React 18 · TypeScript · Vite 8 · Vitest · Capacitor 8 · Dart 3 · Gemma 4 (LiteRT) · Offline Knowledge RAG
+
+## Roadmap
+
+- [x] Route-driven V1: wealth, power, cover, and modern-edge planning
+- [x] Chinese and English deep-adapted product copy
+- [x] Curated offline knowledge pack with route-aware retrieval
+- [x] Public GitHub release with CI, discussions, and release metadata
+- [x] Polished public demo assets and storefront-style screenshots
+- [ ] Broader historical region and era coverage
+- [ ] Richer mobile release artifacts (APK, TestFlight)
+- [ ] Multi-turn session memory for follow-up questions
+- [ ] Community-contributed knowledge packs
+- [ ] Custom route definitions
+
+## Contributing
+
+Timet welcomes contributions — whether it is a new knowledge pack, a language improvement, or a bug fix. See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
 
 ## Repository Guide
 
 - [Route Design](./docs/ROUTES.md)
 - [Knowledge Pack Notes](./docs/KNOWLEDGE_PACK.md)
-- [Contributing](./CONTRIBUTING.md)
 - [Security Policy](./SECURITY.md)
-- [Latest Release](https://github.com/wimi321/timet/releases)
-
-## Roadmap
-
-- [x] Route-driven V1 for wealth, power, cover, and modern-edge planning
-- [x] Chinese and English first-run product copy
-- [x] Curated offline knowledge pack with route-aware retrieval
-- [x] Public GitHub release with CI, discussions, and release metadata
-- [x] Better public demo assets and storefront-style screenshots
-- [ ] Broader historical region coverage beyond the current seed set
-- [ ] Richer release artifacts for mobile installation
+- [Changelog](./CHANGELOG.md)
 
 ## License
 
 Timet is released under the [Apache-2.0 License](./LICENSE).
+
+---
+
+<p align="center">
+  If Timet helped you plan your time-travel conquest, consider giving it a <a href="https://github.com/wimi321/timet/stargazers">star</a>.
+</p>
