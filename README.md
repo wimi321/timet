@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <strong>An app built for time travelers.</strong>
+  <strong>An app for time travelers.</strong>
 </p>
 
 <p align="center">
@@ -47,10 +47,10 @@ Timet answers like a sharp strategist with practical routes for wealth, influenc
 <table>
   <tr>
     <td width="50%">
-      <img src="./docs/assets/timet-home-en.png" alt="Timet home screen in English" />
+      <img src="./docs/assets/timet-home-en.png" alt="Timet home screen in English" width="100%" />
     </td>
     <td width="50%">
-      <img src="./docs/assets/timet-answer-en.png" alt="Timet answer screen in English" />
+      <img src="./docs/assets/timet-answer-en.png" alt="Timet answer screen in English" width="100%" />
     </td>
   </tr>
   <tr>
