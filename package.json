@@ -3,6 +3,29 @@
   "private": true,
   "version": "0.2.0",
   "type": "module",
+  "description": "An offline-first time-travel strategist app. Tell it the era, place, and goal — get a structured route to wealth, power, or survival.",
+  "keywords": [
+    "time-travel",
+    "strategy",
+    "offline-first",
+    "on-device-ai",
+    "gemma",
+    "litert",
+    "capacitor",
+    "react",
+    "typescript",
+    "multilingual"
+  ],
+  "homepage": "https://github.com/wimi321/timet",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wimi321/timet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wimi321/timet/issues"
+  },
+  "author": "wimi321",
+  "license": "Apache-2.0",
   "scripts": {
     "dev": "vite",
     "knowledge:build": "node scripts/build_offline_knowledge.mjs",

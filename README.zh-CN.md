@@ -22,6 +22,7 @@
   <img alt="Vite" src="https://img.shields.io/badge/Vite-8-646CFF?style=flat-square&logo=vite&logoColor=white">
   <img alt="Capacitor" src="https://img.shields.io/badge/Capacitor-8-119EFF?style=flat-square&logo=capacitor&logoColor=white">
   <img alt="Dart" src="https://img.shields.io/badge/Dart-3.4-0175C2?style=flat-square&logo=dart&logoColor=white">
+  <img alt="Gemma 4" src="https://img.shields.io/badge/Gemma_4-On--Device-FF6F00?style=flat-square&logo=google&logoColor=white">
 </p>
 
 <p align="center">
@@ -29,7 +30,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/wimi321/timet/releases/latest/download/timet-0.1.1-arm64.apk">
+  <a href="https://github.com/wimi321/timet/releases/latest/download/timet-v0.2.0-arm64.apk">
     <img alt="下载 APK" src="https://img.shields.io/badge/%E4%B8%8B%E8%BD%BD%20APK-arm64-2ea44f?style=for-the-badge&logo=android&logoColor=white">
   </a>
 </p>
@@ -82,9 +83,32 @@
 - **先给路线，不先堆设定** — 重点是怎么走，不是背景故事复述。
 - **五段式结构化回答** — 每条回复都收敛为：局面判断、先走三步、主路径、避坑项、下一步该问什么。
 - **离线优先架构** — 内置知识包 + 本地模型推理，不依赖服务器。
-- **20 种语言** — 中英文深度适配，另支持 18 种语言。
+- **8 种语言** — 中英日韩西法德深度适配，所有界面文本均有完整翻译。
 - **端侧 AI** — 通过 LiteRT 在手机端本地运行 Gemma 4，数据不离开设备。
 - **全平台** — 一套代码通过 Capacitor 发布到 Web、Android 和 iOS。
+
+<details>
+<summary><strong>v0.2.0 新特性</strong></summary>
+
+- 聊天输入升级为自动调高的多行 textarea（Enter 发送，Shift+Enter 换行）
+- CSS 动画：路由卡片交错入场、消息滑入、模型面板底部滑入
+- 模型下载可视化进度条
+- AI 回复支持一键复制和分享
+- 清除对话前弹出确认弹窗，防止误操作
+- 原生设备按钮触觉反馈
+- 模型面板焦点陷阱和 ARIA 无障碍支持
+- 新增日语、韩语、西班牙语、法语、德语完整翻译
+- App.tsx 从 1308 行重构为 ~550 行（提取 6 个独立组件）
+
+</details>
+
+## 架构
+
+<p align="center">
+  <img src="./docs/assets/timet-architecture.svg" alt="Timet 架构图" width="100%">
+</p>
+
+Timet 采用**双栈架构**：React 18 前端通过 `BeaconBridge` 抽象层与 Dart 后端通信。移动端通过 Capacitor 桥接，将请求路由到端侧 Gemma 4 推理引擎（LiteRT），并通过 RAG 检索离线知识包。Web 端使用严格桥接，确保零服务器依赖。一切在本地运行——无需云服务、无需 API Key。
 
 ## 工作原理
 
@@ -181,11 +205,14 @@ React 18 · TypeScript · Vite 8 · Vitest · Capacitor 8 · Dart 3 · Gemma 4 (
 - [x] 完成首批离线穿越知识包与路线感知检索
 - [x] 完成公开 GitHub 仓库、CI 与 Release
 - [x] 补齐公开展示素材和 README 截图
-- [ ] 扩大时代与地区知识覆盖面
-- [ ] 完善移动端发布产物（APK、TestFlight）
+- [x] 组件化架构重构 + UX 动画打磨
+- [x] 8 种语言完整翻译（en, zh-CN, zh-TW, ja, ko, es, fr, de）
+- [x] 无障碍改进：焦点陷阱、ARIA 角色、屏幕阅读器支持
+- [ ] GitHub Pages 在线演示
 - [ ] 多轮追问的 Session Memory
 - [ ] 社区贡献知识包流程
 - [ ] 自定义路线支持
+- [ ] 扩大时代与地区知识覆盖面
 
 ## 参与贡献
 

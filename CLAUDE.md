@@ -40,7 +40,7 @@ npm run mobile:android  # Build + open Android Studio
 
 ### Dual-stack: React frontend + Dart backend
 
-- **Frontend**: React 18 + TypeScript + Vite 8. Single-page app in `src/`. The main UI lives in `src/App.tsx` (~1300 lines, monolith component managing all state via `useState`/`useRef`).
+- **Frontend**: React 18 + TypeScript + Vite 8. Single-page app in `src/`. Main orchestrator in `src/App.tsx` (~550 lines), with extracted components in `src/components/` (HeroPanel, RouteGrid, ChatMessages, ChatInputBar, ModelPanel, ConfirmDialog) and shared helpers in `src/lib/appHelpers.ts`.
 - **Backend**: Dart package in `lib/` with `pubspec.yaml`. Handles offline model runtime (LiteRT), RAG retrieval, mesh networking, storage (Isar), and resumable downloads. Structured as `lib/src/` (core logic with contract interfaces), `lib/adapters/` (platform adapters).
 - **Mobile shell**: Capacitor 8 wraps the web app for iOS/Android. Config in `capacitor.config.ts`. Native platforms in `ios/` and `android/`.
 
@@ -69,7 +69,7 @@ App.tsx manages inference runs via an incrementing counter (`activeInferenceRunR
 
 ### i18n
 
-- 20 supported languages (en, zh-CN, zh-TW, ja, ko, es, fr, de, pt, ru, ar, hi, id, it, tr, vi, th, nl, pl, uk)
+- 8 supported languages (en, zh-CN, zh-TW, ja, ko, es, fr, de)
 - React context provider in `src/i18n/index.tsx` with `useI18n()` hook
 - Translation keys in `src/i18n/messages.ts`, resolution in `src/i18n/translate.ts`
 - Locale resolution: localStorage (`timet_locale`, legacy `beacon_locale`) → `navigator.languages` → English fallback
