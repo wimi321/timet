@@ -26,7 +26,8 @@
 </p>
 
 <p align="center">
-  <strong>给穿越者准备的极简军师 App。</strong>
+  <strong>给穿越者准备的极简军师 App。</strong><br/>
+  <sub>穿越之后没有 Wi-Fi，没有云，没有 API Key。<br/>唯一能用的 AI，是已经装在你手机里的那个。</sub>
 </p>
 
 <p align="center">
@@ -55,6 +56,8 @@
 
 告诉 Timet 你的**时代**、**地点**、**身份**、**手里资源**和**目标**——它会给你一条能走的首富线、上位线、避坑线或现代知识外挂路线。不堆设定，不空谈背景。每条回答都收敛成**五段式军师简报**，拿到就能拆步骤执行。
 
+> **为什么必须端侧大模型？** Timet 通过 [LiteRT](https://ai.google.dev/edge/litert) 在手机上运行 Google [Gemma 4](https://ai.google.dev/gemma) 大模型——不需要服务器，不需要联网，不需要 API 调用。模型随 App 安装（或首次下载一次），之后永久离线可用。真穿越到北宋汴京或都铎伦敦的时候，你的 ChatGPT 没信号了，Timet 还能用。这才是重点。
+
 ## 产品预览
 
 <table>
@@ -80,11 +83,11 @@
 
 ## 特性
 
+- **手机上跑 Gemma 4 大模型** — 通过 LiteRT 在手机端本地运行 Google Gemma 4（2B / 4B）。安装后不再需要联网。你的军师跟你一起穿越。
+- **100% 离线架构** — 内置知识包 + 端侧模型推理。无云服务、无 API Key、无订阅费。飞行模式能用，北宋也能用。
 - **先给路线，不先堆设定** — 重点是怎么走，不是背景故事复述。
 - **五段式结构化回答** — 每条回复都收敛为：局面判断、先走三步、主路径、避坑项、下一步该问什么。
-- **离线优先架构** — 内置知识包 + 本地模型推理，不依赖服务器。
 - **8 种语言** — 中英日韩西法德深度适配，所有界面文本均有完整翻译。
-- **端侧 AI** — 通过 LiteRT 在手机端本地运行 Gemma 4，数据不离开设备。
 - **全平台** — 一套代码通过 Capacitor 发布到 Web、Android 和 iOS。
 
 <details>
@@ -232,5 +235,6 @@ Timet 基于 [Apache-2.0](./LICENSE) 开源。
 ---
 
 <p align="center">
-  如果 Timet 帮你规划了穿越大业，欢迎给一颗 <a href="https://github.com/wimi321/timet/stargazers">Star</a>。
+  Timet 在你手机上运行 Gemma 4 大模型。无需云服务，无需 API Key，只有你和你的军师。<br/>
+  如果下次穿越你也想带上它，欢迎给一颗 <a href="https://github.com/wimi321/timet/stargazers">Star</a>。
 </p>

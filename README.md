@@ -26,7 +26,8 @@
 </p>
 
 <p align="center">
-  <strong>An app for time travelers.</strong>
+  <strong>An app for time travelers.</strong><br/>
+  <sub>After you time-travel, there is no Wi-Fi, no cloud, no API key.<br/>The only AI that still works is the one already on your phone.</sub>
 </p>
 
 <p align="center">
@@ -55,6 +56,8 @@
 
 Tell Timet the **era**, **place**, **identity**, **starting resources**, and **goal** — it drafts a playable strategy route for wealth, influence, cover, or modern-edge leverage. No lore dumps, no hand-waving. Every answer lands in a **structured five-part brief** you can act on immediately.
 
+> **Why on-device AI?** Timet runs [Gemma 4](https://ai.google.dev/gemma) entirely on your phone via [LiteRT](https://ai.google.dev/edge/litert) — no server, no internet, no API calls. The model ships with the app (or downloads once), then works offline forever. If you actually time-traveled to Song Dynasty Kaifeng or Tudor London, your cloud-based ChatGPT is gone. Timet still runs. That's the point.
+
 ## Product Preview
 
 <table>
@@ -80,11 +83,11 @@ Tell Timet the **era**, **place**, **identity**, **starting resources**, and **g
 
 ## Features
 
+- **Gemma 4 on your phone** — Runs Google's Gemma 4 (2B / 4B) locally via LiteRT. No internet required after setup. Your strategist survives the time-travel with you.
+- **100% offline architecture** — Bundled knowledge packs + on-device model. No cloud, no API key, no subscription. Works in airplane mode, works in the Song Dynasty.
 - **Route-first, not lore-first** — Timet gives you a playable path, not a wall of background trivia.
 - **Structured answers** — Every reply converges on five sections: situation read, first moves, main path, fatal mistakes, and next question.
-- **Offline-first architecture** — Bundled knowledge packs and on-device model support. No server required.
 - **8 languages** — Chinese, English, Japanese, Korean, Spanish, French, and German deep-adapted.
-- **On-device AI** — Runs Gemma 4 locally via LiteRT on mobile. Your data stays on your device.
 - **Cross-platform** — One codebase ships to Web, Android, and iOS via Capacitor.
 
 <details>
@@ -233,5 +236,6 @@ Timet is released under the [Apache-2.0 License](./LICENSE).
 ---
 
 <p align="center">
-  If Timet helped you plan your time-travel conquest, consider giving it a <a href="https://github.com/wimi321/timet/stargazers">star</a>.
+  Timet runs Gemma 4 on your phone. No cloud. No API key. Just you and your strategist.<br/>
+  If that sounds useful for your next time-travel, give it a <a href="https://github.com/wimi321/timet/stargazers">star</a>.
 </p>
