@@ -1,4 +1,4 @@
-# Timet / 穿越助手
+# Timet
 
 <p align="center">
   <a href="https://github.com/wimi321/timet/releases">
@@ -56,25 +56,21 @@
 
 Tell Timet the **era**, **place**, **identity**, **starting resources**, and **goal** — it drafts a playable strategy route for wealth, influence, cover, or modern-edge leverage. No lore dumps, no hand-waving. Every answer lands in a **structured five-part brief** you can act on immediately.
 
-> **Why on-device AI?** Timet runs [Gemma 4](https://ai.google.dev/gemma) entirely on your phone via [LiteRT](https://ai.google.dev/edge/litert) — no server, no internet, no API calls. The model ships with the app (or downloads once), then works offline forever. If you actually time-traveled to Song Dynasty Kaifeng or Tudor London, your cloud-based ChatGPT is gone. Timet still runs. That's the point.
+> **Why on-device AI?** Timet runs [Gemma 4](https://ai.google.dev/gemma) entirely on your phone via [LiteRT](https://ai.google.dev/edge/litert) — no server, no internet, no API calls. The model ships with the app (or downloads once), then works offline forever. If you actually time-traveled to Tudor London, Regency Bath, or Victorian Manchester, your cloud-based ChatGPT is gone. Timet still runs. That's the point.
 
 ## Product Preview
 
 <table>
   <tr>
-    <td width="50%">
+    <td width="50%" valign="top">
       <img src="./docs/assets/timet-home-en.png" alt="Timet home screen in English" width="100%" />
-    </td>
-    <td width="50%">
-      <img src="./docs/assets/timet-answer-en.png" alt="Timet answer screen in English" width="100%" />
-    </td>
-  </tr>
-  <tr>
-    <td valign="top">
+      <br/><br/>
       <strong>Home briefing</strong><br/>
       Start with <code>era + place + identity + resources + goal</code>, then pick a route or type straight into the strategist.
     </td>
-    <td valign="top">
+    <td width="50%" valign="top">
+      <img src="./docs/assets/timet-answer-en.png" alt="Timet answer screen in English" width="100%" />
+      <br/><br/>
       <strong>Route answer</strong><br/>
       Timet replies in a five-part strategist brief, grounded in the local knowledge pack and written for action.
     </td>
@@ -84,10 +80,10 @@ Tell Timet the **era**, **place**, **identity**, **starting resources**, and **g
 ## Features
 
 - **Gemma 4 on your phone** — Runs Google's Gemma 4 (2B / 4B) locally via LiteRT. No internet required after setup. Your strategist survives the time-travel with you.
-- **100% offline architecture** — Bundled knowledge packs + on-device model. No cloud, no API key, no subscription. Works in airplane mode, works in the Song Dynasty.
+- **100% offline architecture** — Bundled knowledge packs + on-device model. No cloud, no API key, no subscription. Works in airplane mode, works in the wrong century.
 - **Route-first, not lore-first** — Timet gives you a playable path, not a wall of background trivia.
 - **Structured answers** — Every reply converges on five sections: situation read, first moves, main path, fatal mistakes, and next question.
-- **8 languages** — Chinese, English, Japanese, Korean, Spanish, French, and German deep-adapted.
+- **8 languages** — English, Simplified Chinese, Traditional Chinese, Japanese, Korean, Spanish, French, and German deep-adapted.
 - **Cross-platform** — One codebase ships to Web, Android, and iOS via Capacitor.
 
 <details>
@@ -111,7 +107,7 @@ Tell Timet the **era**, **place**, **identity**, **starting resources**, and **g
   <img src="./docs/assets/timet-architecture.svg" alt="Timet architecture diagram" width="100%">
 </p>
 
-Timet runs a **dual-stack** architecture: a React 18 frontend communicates with a Dart backend through the `BeaconBridge` abstraction. On mobile, the Capacitor bridge routes requests to on-device Gemma 4 inference via LiteRT, with offline knowledge retrieval via RAG. On the web, a strict bridge enforces that no server dependency exists. Everything runs locally — no cloud, no API keys.
+Timet runs a **dual-stack** architecture: a React 18 frontend communicates with a Dart backend through a native bridge abstraction. On mobile, the Capacitor bridge routes requests to on-device Gemma 4 inference via LiteRT, with offline knowledge retrieval via RAG. On the web, a strict bridge enforces that no server dependency exists. Everything runs locally — no cloud, no API keys.
 
 ## How It Works
 
@@ -123,10 +119,10 @@ Timet runs a **dual-stack** architecture: a React 18 frontend communicates with 
 
 | Route | Prompt |
 | --- | --- |
-| Fortune Line | `我在北宋汴京，识字，有一点碎银，怎么三个月赚到第一桶金？` |
 | Fortune Line | `Regency London, literate clerk, a few guineas, how do I build my first fortune in 90 days?` |
 | Power Line | `Tudor London, I serve in a noble household. How do I gain influence without getting crushed?` |
 | Fatal Mistakes | `I just arrived in medieval London with no patron. What must I hide first to blend in?` |
+| Modern Edge | `Victorian Manchester, small workshop assistant, a little capital. Which modern methods can become real money first?` |
 
 **Answer shape — every response follows this contract:**
 

@@ -18,7 +18,8 @@ class RetrievalPipeline {
     final matchedCategories = <String>[];
     final directHits = <RetrievedKnowledge>[];
 
-    if (request.categoryHint != null && request.categoryHint!.trim().isNotEmpty) {
+    if (request.categoryHint != null &&
+        request.categoryHint!.trim().isNotEmpty) {
       final category = request.categoryHint!.trim();
       final directEntries = await _knowledgeStore.findByCategory(
         category: category,
@@ -60,7 +61,8 @@ class RetrievalPipeline {
         .toList(growable: false);
 
     final supporting = merged
-        .where((item) => !authoritative.any((saved) => saved.entry.id == item.entry.id))
+        .where((item) =>
+            !authoritative.any((saved) => saved.entry.id == item.entry.id))
         .take(_config.maxRetrievedKnowledge - authoritative.length)
         .toList(growable: false);
 
@@ -78,7 +80,7 @@ class RetrievalPipeline {
 
   String buildGroundingContext(EvidenceBundle evidence) {
     if (!evidence.hasAuthoritativeEvidence) {
-      return 'NO_AUTHORITATIVE_CONTEXT_FOUND';
+      return 'NO_ROUTE_KNOWLEDGE_FOUND';
     }
 
     return [
@@ -89,22 +91,21 @@ class RetrievalPipeline {
           'Summary: ${item.entry.summary}',
           'Steps:',
           ...item.entry.steps.map((step) => '- $step'),
-          if (item.entry.contraindications.isNotEmpty) 'Contraindications:',
+          if (item.entry.contraindications.isNotEmpty) 'Do not expose / avoid:',
           ...item.entry.contraindications.map((item) => '- $item'),
-          'Escalation: ${item.entry.escalation}',
+          'Next step: ${item.entry.escalation}',
         ].join('\n'),
       ),
       ...evidence.supporting.take(2).map(
-        (item) => [
-          'Supporting source: ${item.entry.source}',
-          'Supporting title: ${item.entry.title}',
-          'Supporting summary: ${item.entry.summary}',
-          'Supporting steps:',
-          ...item.entry.steps.take(2).map((step) => '- $step'),
-        ].join('\n'),
-      ),
-    ]
-        .join('\n\n---\n\n');
+            (item) => [
+              'Supporting source: ${item.entry.source}',
+              'Supporting title: ${item.entry.title}',
+              'Supporting summary: ${item.entry.summary}',
+              'Supporting steps:',
+              ...item.entry.steps.take(2).map((step) => '- $step'),
+            ].join('\n'),
+          ),
+    ].join('\n\n---\n\n');
   }
 
   List<RetrievedKnowledge> _mergeEvidence(

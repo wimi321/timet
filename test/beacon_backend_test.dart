@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 
 void main() {
   test('bootstrap knowledge ships the Timet offline strategy bundle', () {
-    final entries = BootstrapModels.emergencySeedKnowledge();
+    final entries = BootstrapModels.routeSeedKnowledge();
     expect(entries.length, greaterThanOrEqualTo(10));
     expect(entries.first.sourceUrl, isNotEmpty);
     expect(
@@ -32,117 +32,128 @@ void main() {
     );
   });
 
-  test('knowledge store expands wilderness and crisis survival queries',
-      () async {
+  test('knowledge store expands Timet route queries', () async {
     final store = InMemoryKnowledgeStore();
     await store.upsertAll([
       const KnowledgeEntry(
-        id: 'survival-night',
-        title: '没信号又快天黑时先稳住保温和方位',
-        summary: '通信中断加临近天黑时，先把自己留在更容易活过夜的位置。',
-        steps: ['先停下评估体温、水和电量。'],
-        contraindications: ['不要盲目赶路'],
-        escalation: '若天气恶化，立刻待援。',
-        tags: ['survival_field', '断联', '天黑', 'no signal'],
-        aliases: ['山里没信号怎么办'],
-        source: 'National Park Service: Wilderness Travel Basics',
+        id: 'fortune-regency',
+        title: 'Regency London First Fortune Line',
+        summary: 'Clean books and discreet errands create repeat business.',
+        steps: ['Start with copying, bookkeeping, and broker errands.'],
+        contraindications: ['Do not pretend to be a gentleman investor.'],
+        escalation: 'Move into agency work once trust is stable.',
+        tags: ['fortune line', 'Regency London', 'merchant', 'ledger'],
+        aliases: ['first fortune', 'a few guineas'],
+        source: 'Timet Curated Pack: Mercantile Ladders',
         priority: 9,
       ),
       const KnowledgeEntry(
-        id: 'radiation-fallout',
-        title: '核爆或放射性尘降时先进去待住听通知',
-        summary: '先进入厚实建筑内部，减少外暴露。',
-        steps: ['立刻进入坚固建筑。'],
-        contraindications: ['不要继续停留在户外'],
-        escalation: '建筑失效时尽快转移到更厚实掩体。',
-        tags: ['crisis_radiation', '核爆', 'fallout'],
-        aliases: ['核爆后怎么办'],
-        source: 'Ready.gov: Radiation Emergencies',
+        id: 'power-tudor',
+        title: 'Tudor London Patronage Ladder',
+        summary: 'Rise through household papers, provisions, and favors.',
+        steps: ['Enter a household as clerk, scrivener, or discreet runner.'],
+        contraindications: ['Do not speak about religion or succession early.'],
+        escalation: 'Trade reliability for introductions and office.',
+        tags: ['power line', 'Tudor London', 'patronage', 'court'],
+        aliases: ['noble household', 'influence'],
+        source: 'Timet Curated Pack: Court and Patronage Ladders',
         priority: 10,
       ),
       const KnowledgeEntry(
-        id: 'cyber-outage',
-        title: '网络或 AI 攻击怀疑时立刻切离线保核心功能',
-        summary: '先保留通信、电量和可信信息源。',
-        steps: ['断开可疑网络连接。'],
-        contraindications: ['不要点击未知链接'],
-        escalation: '若已影响基础设施，转入长期停电停网方案。',
-        tags: ['crisis_cyber', 'ai攻击', '停电', '断网'],
-        aliases: ['AI攻击导致停电断网怎么办'],
-        source: 'Ready.gov: Cybersecurity',
+        id: 'modern-victorian',
+        title: 'Victorian Workshop Modern Edge',
+        summary: 'Process discipline beats miracle invention in a workshop.',
+        steps: ['Start with packaging, hygiene, batch control, and ledgers.'],
+        contraindications: ['Do not promise electricity or engines overnight.'],
+        escalation: 'Scale only after the process survives repeat batches.',
+        tags: ['modern edge', 'Victorian Manchester', 'standardization'],
+        aliases: ['modern methods', 'workshop'],
+        source: 'Timet Curated Pack: Modern Edge That Actually Lands',
         priority: 8,
       ),
     ]);
 
-    final wilderness = await store.search(query: '山里没信号天快黑了怎么办', limit: 1);
-    final radiation = await store.search(query: '核爆后外面可能有灰尘怎么办', limit: 1);
-    final cyber = await store.search(query: 'AI攻击导致停电断网，现在先做什么', limit: 1);
+    final fortune = await store.search(
+      query: 'Regency London, a few guineas, how do I get rich first?',
+      limit: 1,
+    );
+    final power = await store.search(
+      query: 'Tudor London noble household, how do I gain influence at court?',
+      limit: 1,
+    );
+    final modern = await store.search(
+      query:
+          'Victorian Manchester workshop, which modern process can become money?',
+      limit: 1,
+    );
 
-    expect(wilderness.first.entry.id, 'survival-night');
-    expect(radiation.first.entry.id, 'radiation-fallout');
-    expect(cyber.first.entry.id, 'cyber-outage');
+    expect(fortune.first.entry.id, 'fortune-regency');
+    expect(power.first.entry.id, 'power-tudor');
+    expect(modern.first.entry.id, 'modern-victorian');
   });
 
-  test('knowledge store maps colloquial chest pain and scald queries to the right first-aid cards',
+  test(
+      'knowledge store maps colloquial Chinese route queries to the right cards',
       () async {
     final store = InMemoryKnowledgeStore();
     await store.upsertAll([
       const KnowledgeEntry(
-        id: 'heart-attack',
-        title: '疑似心梗的处置',
-        summary: '胸痛伴冷汗和放射痛时，先按心梗处理。',
-        steps: ['立即停止活动并取最易呼吸姿势。'],
-        contraindications: ['不要继续走动或负重'],
-        escalation: '尽快联系急救。',
-        tags: ['heart attack', 'chest pain', 'cardiac'],
-        aliases: ['胸痛冒冷汗', '左臂放射痛'],
-        source: 'MedlinePlus: Heart attack first aid',
+        id: 'song-fortune',
+        title: '北宋汴京小本起家账房法',
+        summary: '先做高频小生意、账本和信用。',
+        steps: ['从纸笔、针线、茶点等高频货起步。'],
+        contraindications: ['不要一开局就吹跨时代发明。'],
+        escalation: '现金流稳定后再做批零结合。',
+        tags: ['首富线', '北宋', '汴京', '账本'],
+        aliases: ['第一桶金', '发财'],
+        source: 'Timet Curated Pack: Mercantile Ladders',
         priority: 10,
       ),
       const KnowledgeEntry(
-        id: 'burns',
-        title: '热力烧伤与烫伤处置',
-        summary: '先持续凉水降温并保护创面。',
-        steps: ['立即用流动凉水冲洗烧伤处。'],
-        contraindications: ['不要涂牙膏或直接敷冰'],
-        escalation: '面积大或在面部会阴时立刻转运。',
-        tags: ['burn', 'burns', 'scald'],
-        aliases: ['热油烫伤', '烫到手臂'],
-        source: 'NHS: Burns and scalds',
+        id: 'song-survival',
+        title: '南宋临安初到避坑线',
+        summary: '先学称呼、钱制、礼法和稳定来路。',
+        steps: ['先观察口音、称呼和银钱单位。'],
+        contraindications: ['不要主动说自己来自未来。'],
+        escalation: '身份稳定后再找差事和靠山。',
+        tags: ['避坑线', '南宋', '临安', '礼法'],
+        aliases: ['不能暴露什么', '融入'],
+        source: 'Timet Curated Pack: Arrival Survival Protocols',
         priority: 10,
       ),
     ]);
 
-    final chestPain = await store.search(
-      query: '胸口很痛，冒冷汗，左臂也痛，怎么先保命',
+    final fortune = await store.search(
+      query: '我在北宋汴京有一点碎银，怎么先发财赚第一桶金',
       limit: 1,
     );
-    final burns = await store.search(
-      query: '热油烫到手臂一大片，现在该怎么处理',
+    final survival = await store.search(
+      query: '我在南宋临安刚到陌生城里，最先不能暴露什么',
       limit: 1,
     );
 
-    expect(chestPain.first.entry.id, 'heart-attack');
-    expect(burns.first.entry.id, 'burns');
+    expect(fortune.first.entry.id, 'song-fortune');
+    expect(survival.first.entry.id, 'song-survival');
   });
 
-  test('triage uses direct evidence hits and doomsday profile', () async {
+  test('triage uses direct route evidence hits and doomsday profile', () async {
     final knowledgeStore = InMemoryKnowledgeStore();
     await knowledgeStore.upsertAll([
       const KnowledgeEntry(
-        id: 'bleeding-1',
-        title: '大出血处理',
-        summary: '持续性大出血先压迫止血。',
+        id: 'regency-fortune',
+        title: 'Regency London First Fortune Line',
+        summary:
+            'A literate clerk can turn clean books and discreet errands into repeat business.',
         steps: [
-          '直接压迫出血点。',
-          '持续加压并抬高伤肢。',
-          '必要时使用止血带并记录时间。',
+          'Start with copying, bookkeeping, and broker errands.',
+          'Stay near coffeehouses, law offices, inns, and shopping streets.',
+          'Win repeat patrons through punctual delivery and silence.',
         ],
-        contraindications: ['不要频繁松开检查'],
-        escalation: '尽快联系急救人员并安排转运。',
-        tags: ['出血', '止血', 'tourniquet'],
-        aliases: ['大出血', 'bleeding'],
-        source: 'FM 21-76',
+        contraindications: ['Do not pretend to be above your references.'],
+        escalation: 'Move into agency work and small credit after trust forms.',
+        tags: ['fortune line', 'Regency London', 'ledger'],
+        aliases: ['first fortune', 'a few guineas'],
+        source: 'Timet Curated Pack: Mercantile Ladders',
         priority: 10,
       ),
     ]);
@@ -164,8 +175,10 @@ void main() {
 
     final response = await backend.triage(
       const EmergencyRequest(
-        userText: '患者手臂大出血，怎么先救命？',
-        categoryHint: '大出血',
+        userText:
+            'Regency London, literate clerk, a few guineas, how do I build my first fortune?',
+        categoryHint: 'fortune line',
+        locale: 'en',
         powerMode: PowerMode.doomsday,
       ),
     );
@@ -196,7 +209,7 @@ void main() {
 
     final response = await backend.triage(
       const EmergencyRequest(
-        userText: '感觉不太对，但是说不清哪里受伤。',
+        userText: 'I woke up somewhere old, but I do not know the era yet.',
         locale: 'en',
       ),
     );
@@ -204,8 +217,8 @@ void main() {
     expect(runtime.lastInput, isNotNull);
     expect(response.guidanceMode, GuidanceMode.grounded);
     expect(response.isKnowledgeBacked, isFalse);
-    expect(response.disclaimer, contains('AI'));
-    expect(response.disclaimer, contains('limited'));
+    expect(response.disclaimer, contains('limited knowledge'));
+    expect(response.disclaimer, contains('Timet brief'));
   });
 
   test('triage system prompt pins model output language from locale', () async {
@@ -213,20 +226,21 @@ void main() {
     final knowledgeStore = InMemoryKnowledgeStore();
     await knowledgeStore.upsertAll([
       const KnowledgeEntry(
-        id: 'fire-1',
-        title: 'Fire survival basics',
-        summary: 'Stay low and avoid smoke inhalation.',
+        id: 'tudor-power',
+        title: 'Tudor London Patronage Ladder',
+        summary: 'Influence comes from letters, provisions, and introductions.',
         steps: [
-          'Stay low to the ground.',
-          'Seal gaps if the door is hot.',
-          'Signal for help near a window.',
+          'Enter a household as a clerk or discreet runner.',
+          'Make yourself useful in letters and provisioning.',
+          'Track who controls seals, access, and gossip.',
         ],
-        contraindications: ['Do not run upright through smoke'],
-        escalation:
-            'Seek emergency responders as soon as communication returns.',
-        tags: ['fire', 'smoke'],
-        aliases: ['smoke inhalation', 'trapped in fire'],
-        source: 'NFPA Fire Survival',
+        contraindications: [
+          'Do not discuss succession before you know the room.'
+        ],
+        escalation: 'Trade reliable service for patronage.',
+        tags: ['power line', 'Tudor London', 'court', 'patronage'],
+        aliases: ['noble household', 'influence'],
+        source: 'Timet Curated Pack: Court and Patronage Ladders',
         priority: 10,
       ),
     ]);
@@ -247,8 +261,9 @@ void main() {
 
     await backend.triage(
       const EmergencyRequest(
-        userText: 'Need help with smoke inhalation.',
-        categoryHint: 'fire',
+        userText:
+            'Tudor London, I serve in a noble household. How do I gain influence?',
+        categoryHint: 'power line',
         locale: 'ja',
       ),
     );
@@ -302,7 +317,7 @@ void main() {
     expect(runtime.lastInput!.userPrompt, contains('SESSION_RESET: true'));
   });
 
-  test('sos packet broadcasts with hop metadata', () async {
+  test('legacy sos packet broadcasts with hop metadata', () async {
     final backend = BeaconBackend(
       knowledgeStore: InMemoryKnowledgeStore(),
       modelRuntime: _FakeRuntime(),
@@ -321,7 +336,7 @@ void main() {
     final result = await backend.broadcastSos(
       senderId: 'node-a',
       location: const GeoPoint(latitude: 30.2741, longitude: 120.1551),
-      brief: '腿部开放性骨折，意识清醒，需要转运。',
+      brief: 'Legacy local broadcast capability retained outside the V1 UI.',
     );
 
     expect(result.packet.canRelay, isTrue);
@@ -339,7 +354,8 @@ class _FakeRuntime implements ModelRuntime {
   Future<ModelInferenceOutput> infer(ModelInferenceInput input) async {
     lastInput = input;
     return const ModelInferenceOutput(
-      text: '1. 先直接压迫出血点。\n2. 用干净布料持续加压。\n3. 若无法止血再使用止血带并记录时间。',
+      text:
+          '1. Current Read: start with trust and repeat business.\n2. First Three Moves: copy, keep books, and run discreet errands.\n3. Riches / Power Path: become a reliable agent before scaling credit.',
       tokenCount: 42,
     );
   }

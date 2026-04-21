@@ -23,7 +23,10 @@ class BootstrapModels {
     sha256: '',
   );
 
-  static List<KnowledgeEntry> emergencySeedKnowledge() {
+  static List<KnowledgeEntry> routeSeedKnowledge() {
     return List<KnowledgeEntry>.unmodifiable(generatedKnowledgeEntries);
   }
+
+  @Deprecated('Use routeSeedKnowledge for the Timet route knowledge bundle.')
+  static List<KnowledgeEntry> emergencySeedKnowledge() => routeSeedKnowledge();
 }

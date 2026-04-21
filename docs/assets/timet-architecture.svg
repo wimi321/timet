@@ -1,6 +1,6 @@
 <svg width="1200" height="560" viewBox="0 0 1200 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="arch-title arch-desc">
   <title id="arch-title">Timet architecture diagram</title>
-  <desc id="arch-desc">Dual-stack architecture: React frontend communicates with Dart backend through BeaconBridge, powering on-device AI inference and offline knowledge retrieval.</desc>
+  <desc id="arch-desc">Dual-stack architecture: React frontend communicates with Dart backend through a native bridge layer, powering on-device AI inference and offline knowledge retrieval.</desc>
   <defs>
     <linearGradient id="abg" x1="0" y1="0" x2="1200" y2="560" gradientUnits="userSpaceOnUse">
       <stop stop-color="#1C1917"/>
@@ -43,9 +43,9 @@
   <line x1="540" y1="126" x2="588" y2="126" stroke="#FCD34D" stroke-opacity="0.6" stroke-width="1.5"/>
   <polygon points="588,121 598,126 588,131" fill="#FCD34D" fill-opacity="0.6"/>
 
-  <!-- BeaconBridge -->
+  <!-- Native bridge layer -->
   <rect x="600" y="82" width="220" height="88" rx="16" fill="#1F2937" stroke="#FCD34D" stroke-width="1.5"/>
-  <text x="710" y="110" fill="#FCD34D" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="800" text-anchor="middle">BeaconBridge</text>
+  <text x="710" y="110" fill="#FCD34D" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="800" text-anchor="middle">Native Bridge</text>
   <text x="710" y="132" fill="#D6D3D1" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">AsyncIterable&lt;StreamChunk&gt;</text>
   <text x="710" y="150" fill="#78716C" font-family="ui-sans-serif, system-ui, sans-serif" font-size="10" text-anchor="middle">80ms UI flush interval</text>
 

@@ -46,7 +46,7 @@ npm run mobile:android  # Build + open Android Studio
 
 ### Bridge pattern
 
-`BeaconBridge` (`src/lib/beaconBridge.ts`) is the interface between React and the inference backend. Three implementations:
+The native bridge interface is still named `BeaconBridge` in code for compatibility with the original shell, but product-facing docs should refer to it as the Timet native bridge. Three implementations:
 - `capacitorBridge.ts` — native mobile via Capacitor plugins
 - `strictBridge.ts` — web fallback that always errors (no local model available)
 - `mockBridge.ts` — test/dev mock with simulated streaming
@@ -99,4 +99,4 @@ Default bundled model: `gemma-4-e2b` (2B params), alternate `gemma-4-e4b` (4B). 
 
 ### Key types
 
-All core domain types in `src/lib/types.ts`: `TriageRequest`, `TriageResponse`, `BeaconMessage`, `ModelDescriptor`, `KnowledgeCard`, route hints, power modes, model tiers.
+All core domain types in `src/lib/types.ts`: `TriageRequest`, `TriageResponse`, `BeaconMessage`, `ModelDescriptor`, `KnowledgeCard`, route hints, power modes, model tiers. Some legacy type names remain for native compatibility; do not reintroduce emergency/SOS wording into user-facing copy or model prompts.

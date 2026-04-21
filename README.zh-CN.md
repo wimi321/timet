@@ -62,19 +62,15 @@
 
 <table>
   <tr>
-    <td width="50%">
+    <td width="50%" valign="top">
       <img src="./docs/assets/timet-home-zh-cn.png" alt="Timet 中文首页截图" width="100%" />
-    </td>
-    <td width="50%">
-      <img src="./docs/assets/timet-answer-zh-cn.png" alt="Timet 中文回答截图" width="100%" />
-    </td>
-  </tr>
-  <tr>
-    <td valign="top">
+      <br/><br/>
       <strong>首页封面态</strong><br/>
       直接按 <code>时代 + 地点 + 身份 + 资源 + 目标</code> 开问，也可以从路线入口切入。
     </td>
-    <td valign="top">
+    <td width="50%" valign="top">
+      <img src="./docs/assets/timet-answer-zh-cn.png" alt="Timet 中文回答截图" width="100%" />
+      <br/><br/>
       <strong>军师回答态</strong><br/>
       Timet 固定收敛成五段式路线答复，给出命中的知识包来源，方便继续拆阶段执行。
     </td>
@@ -87,7 +83,7 @@
 - **100% 离线架构** — 内置知识包 + 端侧模型推理。无云服务、无 API Key、无订阅费。飞行模式能用，北宋也能用。
 - **先给路线，不先堆设定** — 重点是怎么走，不是背景故事复述。
 - **五段式结构化回答** — 每条回复都收敛为：局面判断、先走三步、主路径、避坑项、下一步该问什么。
-- **8 种语言** — 中英日韩西法德深度适配，所有界面文本均有完整翻译。
+- **8 种语言** — 英文、简体中文、繁体中文、日语、韩语、西班牙语、法语、德语深度适配，所有界面文本均有完整翻译。
 - **全平台** — 一套代码通过 Capacitor 发布到 Web、Android 和 iOS。
 
 <details>
@@ -111,7 +107,7 @@
   <img src="./docs/assets/timet-architecture.svg" alt="Timet 架构图" width="100%">
 </p>
 
-Timet 采用**双栈架构**：React 18 前端通过 `BeaconBridge` 抽象层与 Dart 后端通信。移动端通过 Capacitor 桥接，将请求路由到端侧 Gemma 4 推理引擎（LiteRT），并通过 RAG 检索离线知识包。Web 端使用严格桥接，确保零服务器依赖。一切在本地运行——无需云服务、无需 API Key。
+Timet 采用**双栈架构**：React 18 前端通过原生桥接抽象层与 Dart 后端通信。移动端通过 Capacitor 桥接，将请求路由到端侧 Gemma 4 推理引擎（LiteRT），并通过 RAG 检索离线知识包。Web 端使用严格桥接，确保零服务器依赖。一切在本地运行——无需云服务、无需 API Key。
 
 ## 工作原理
 

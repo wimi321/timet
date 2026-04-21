@@ -38,7 +38,7 @@ class KnowledgeEntry {
         summary,
         ...steps,
         if (contraindications.isNotEmpty) '禁忌: ${contraindications.join('；')}',
-        '升级就医: $escalation',
+        '下一步: $escalation',
       ].join('\n');
 
   String get searchableText => [

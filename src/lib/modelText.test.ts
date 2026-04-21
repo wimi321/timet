@@ -33,28 +33,30 @@ describe('processModelResponse', () => {
 
 describe('formatModelTextForDisplay', () => {
   it('preserves markdown syntax instead of rewriting it', () => {
-    expect(formatModelTextForDisplay('*Keep warm*\n\n1. Find shelter')).toBe(
-      '*Keep warm*\n\n1. Find shelter',
+    expect(formatModelTextForDisplay('*Keep cover*\n\n1. Build trust')).toBe(
+      '*Keep cover*\n\n1. Build trust',
     );
   });
 
   it('promotes inline numbered guidance into readable markdown blocks', () => {
     expect(
       formatModelTextForDisplay(
-        '根据以下步骤进行自救：1. **评估状况：**停下，评估伤情。2. **选择位置：**优先背风位置。**核心原则：**先停、想、看、计划。',
+        '按这条首富线先走：1. **局面判断：**先稳住身份和现金流。2. **先走三步：**记账、定价、找熟客。**核心原则：**先发财，再上位。',
       ),
     ).toBe(
-      '根据以下步骤进行自救：\n\n1. **评估状况：** 停下，评估伤情。\n2. **选择位置：** 优先背风位置。\n\n**核心原则：** 先停、想、看、计划。',
+      '按这条首富线先走：\n\n1. **局面判断：** 先稳住身份和现金流。\n2. **先走三步：** 记账、定价、找熟客。\n\n**核心原则：** 先发财，再上位。',
     );
   });
 });
 
 describe('splitModelResponseText', () => {
   it('keeps a simple compatibility split for summary and steps', () => {
-    const parsed = splitModelResponseText('Stay where you are.\\n1. Make yourself visible\\n2. Keep warm');
+    const parsed = splitModelResponseText(
+      'Start with trust.\\n1. Keep clean ledgers\\n2. Find repeat customers',
+    );
 
-    expect(parsed.summary).toBe('Stay where you are.');
-    expect(parsed.steps).toEqual(['1. Make yourself visible', '2. Keep warm']);
+    expect(parsed.summary).toBe('Start with trust.');
+    expect(parsed.steps).toEqual(['1. Keep clean ledgers', '2. Find repeat customers']);
   });
 });
 
@@ -64,8 +66,8 @@ describe('buildDisplayResponseText', () => {
       summary: 'Fallback summary',
       steps: ['Fallback step'],
     }) as TriageResponse & { rawText?: string };
-    response.rawText = 'Stay calm.\\n\\n1. Find shelter';
+    response.rawText = 'Current Read\\n\\n1. Start with ledgers';
 
-    expect(buildDisplayResponseText(response)).toBe('Stay calm.\n\n1. Find shelter');
+    expect(buildDisplayResponseText(response)).toBe('Current Read\n\n1. Start with ledgers');
   });
 });

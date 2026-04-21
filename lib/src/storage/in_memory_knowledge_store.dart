@@ -5,214 +5,58 @@ import '../models/knowledge_models.dart';
 
 final List<({RegExp pattern, List<String> variants})> _semanticQueryRules = [
   (
-    pattern: RegExp(r'迷路|失联|失聯|找不到路|没信号|沒有信號|lost|stranded|disconnected',
-        caseSensitive: false),
-    variants: <String>[
-      'lost',
-      'stranded',
-      'survival field',
-      'signaling for rescue'
-    ],
-  ),
-  (
-    pattern: RegExp(r'庇护|庇護|避难|避難|过夜|過夜|shelter|bivouac|camp overnight',
-        caseSensitive: false),
-    variants: <String>['shelter', 'survival field', 'emergency shelter'],
-  ),
-  (
-    pattern: RegExp(r'取火|生火|火种|火種|fire-starting|build a fire|start a fire',
-        caseSensitive: false),
-    variants: <String>['fire-starting', 'build a fire', 'warming shelter'],
-  ),
-  (
     pattern: RegExp(
-        r'净水|淨水|溪水|喝生水|喝溪水|water purification|treat water|boil water',
+        r'首富|发财|發財|赚钱|賺錢|第一桶金|生意|买卖|買賣|商路|套利|账本|帳本|merchant|trade|profit|fortune|rich|business|ledger|brokerage|guineas',
         caseSensitive: false),
     variants: <String>[
-      'water purification',
-      'treat water',
-      'boil water',
-      'drinking water safety'
-    ],
-  ),
-  (
-    pattern: RegExp(r'路线|路線|留行程|行程计划|行程計劃|trip plan|route plan|ten essentials',
-        caseSensitive: false),
-    variants: <String>[
-      'trip plan',
-      'route plan',
-      'ten essentials',
-      'outdoor emergency plan'
+      'fortune line',
+      'merchant line',
+      'mercantile ladders',
+      'first fortune',
+      'ledger',
+      'brokerage',
     ],
   ),
   (
     pattern: RegExp(
-        r'求救信号|求救訊號|信号弹|信號彈|镜面反光|signaling|rescue signal|emergency signal',
-        caseSensitive: false),
-    variants: <String>['signaling', 'rescue signal', 'emergency signal'],
-  ),
-  (
-    pattern: RegExp(r'一氧化碳|煤气中毒|煤煙|carbon monoxide|co poisoning',
-        caseSensitive: false),
-    variants: <String>['carbon monoxide', 'co poisoning'],
-  ),
-  (
-    pattern: RegExp(
-        r'胸痛|胸口痛|胸口很痛|胸闷|胸悶|心口痛|心脏痛|心臟痛|左臂痛|冒冷汗|heart attack|chest pain|myocardial infarction',
-        caseSensitive: false),
-    variants: <String>['heart attack', 'chest pain', 'myocardial infarction'],
-  ),
-  (
-    pattern: RegExp(
-        r'烧伤|燒傷|烫伤|燙傷|热油烫|熱油燙|火烧伤|burns?|scald|thermal burn',
-        caseSensitive: false),
-    variants: <String>['burn', 'burns', 'scald', 'thermal burn'],
-  ),
-  (
-    pattern: RegExp(r'中风|脑卒中|卒中|stroke|fast', caseSensitive: false),
-    variants: <String>[
-      'stroke',
-      'face drooping',
-      'arm weakness',
-      'speech trouble'
-    ],
-  ),
-  (
-    pattern: RegExp(r'脑震荡|颅脑损伤|头部外伤|头部撞击|concussion|tbi|traumatic brain injury',
-        caseSensitive: false),
-    variants: <String>['concussion', 'traumatic brain injury', 'head trauma'],
-  ),
-  (
-    pattern: RegExp(r'蛇咬|毒蛇|snake bite|snakebite', caseSensitive: false),
-    variants: <String>['snake bite', 'snakebite', 'venomous snakes'],
-  ),
-  (
-    pattern:
-        RegExp(r'阿片|阿片类|纳洛酮|过量|opioid|overdose|naloxone', caseSensitive: false),
-    variants: <String>['opioid', 'overdose', 'naloxone'],
-  ),
-  (
-    pattern: RegExp(r'食物中毒|food poisoning', caseSensitive: false),
-    variants: <String>['food poisoning', 'staphylococcal food poisoning'],
-  ),
-  (
-    pattern: RegExp(r'中暑|热射病|热衰竭|高温|heat stroke|heat exhaustion|heat stress',
-        caseSensitive: false),
-    variants: <String>['heat stroke', 'heat stress', 'extreme heat'],
-  ),
-  (
-    pattern: RegExp(r'冻伤|低体温|失温|frostbite|hypothermia', caseSensitive: false),
-    variants: <String>['frostbite', 'hypothermia'],
-  ),
-  (
-    pattern: RegExp(r'雷击|雷暴|打雷|lightning|thunderstorm', caseSensitive: false),
-    variants: <String>['lightning', 'thunderstorm safety'],
-  ),
-  (
-    pattern: RegExp(r'植物中毒|毒草|毒植物|poisonous plants?', caseSensitive: false),
-    variants: <String>['poisonous plants'],
-  ),
-  (
-    pattern: RegExp(r'蜱虫|tick bite|ticks', caseSensitive: false),
-    variants: <String>['ticks', 'tick bite'],
-  ),
-  (
-    pattern: RegExp(r'洪水|内涝|flood', caseSensitive: false),
-    variants: <String>['floods', 'storms and floods'],
-  ),
-  (
-    pattern: RegExp(r'触电|电击|electric shock|electrical', caseSensitive: false),
-    variants: <String>['electric shock', 'electrical safety'],
-  ),
-  (
-    pattern: RegExp(
-        r'战争|戰爭|炮击|炮擊|轰炸|轟炸|爆炸|枪击|槍擊|active shooter|blast|explosion|war zone',
+        r'上位|掌权|掌權|称王|稱王|皇帝|摄政|攝政|官场|官場|宫廷|宮廷|权臣|權臣|门客|門客|派系|court|faction|office|patronage|patron|household|influence|throne|power|legitimacy',
         caseSensitive: false),
     variants: <String>[
-      'explosion safety',
-      'hard cover',
-      'shelter in place',
-      'crisis conflict'
+      'power line',
+      'court ladder',
+      'patronage ladder',
+      'court and patronage ladders',
+      'influence',
+      'legitimacy',
     ],
   ),
   (
     pattern: RegExp(
-        r'核战|核戰|核爆|辐射|輻射|脏弹|髒彈|dirty bomb|radiation|nuclear|fallout|radiological',
+        r'避坑|保命|活下来|活下來|藏锋|藏鋒|别暴露|別暴露|融入|礼法|禮法|口音|习俗|習俗|blend in|fatal mistake|custom|etiquette|cover story|suspicion|uncanny',
         caseSensitive: false),
     variants: <String>[
-      'radiation emergency',
-      'nuclear emergency',
-      'fallout',
-      'dirty bomb'
+      'fatal mistakes',
+      'arrival survival',
+      'arrival survival protocols',
+      'cover story',
+      'blend in',
+      'etiquette',
     ],
   ),
   (
     pattern: RegExp(
-        r'病毒袭击|病毒攻擊|生物袭击|生物攻擊|疫情|大流行|anthrax|biohazard|biological attack|pandemic|outbreak',
-        caseSensitive: false),
-    variants: <String>['biohazard', 'biological attack', 'pandemic', 'anthrax'],
-  ),
-  (
-    pattern: RegExp(
-        r'ai攻击|ai攻擊|网络攻击|網絡攻擊|网络入侵|網絡入侵|cyberattack|cyber attack|ransomware|power outage|通信中断|通訊中斷',
+        r'技术|技術|发明|發明|工艺|工藝|肥皂|玻璃|印刷|蒸馏|蒸餾|标准化|標準化|组织|組織|supply chain|process|technology|printing|soap|glass|manufacture|standardization|modern knowledge|modern edge',
         caseSensitive: false),
     variants: <String>[
-      'cyberattack',
-      'communications outage',
-      'power outage',
-      'infrastructure failure'
+      'modern edge',
+      'modern edge methods',
+      'process',
+      'standardization',
+      'workshop',
+      'supply chain',
     ],
   ),
 ];
-
-bool _isOutdoorSurvivalQuery(String query) {
-  return RegExp(
-    r'野外|徒步|登山|露营|露營|迷路|失联|失聯|没信号|沒有信號|求救|过夜|過夜|庇护|庇護|取火|生火|净水|淨水|溪水|打雷|雷暴|雷击|雷擊|山洪|暴雨|失温|失溫|冻伤|凍傷|中暑|蜱虫|蜱蟲|毒植物|蛇咬|蜘蛛咬|trip plan|ten essentials|wilderness|lost|stranded|shelter|water purification|lightning|hypothermia',
-    caseSensitive: false,
-  ).hasMatch(query);
-}
-
-bool _isChestPainQuery(String query) {
-  return RegExp(
-    r'胸痛|胸口痛|胸口很痛|胸闷|胸悶|心口痛|心脏痛|心臟痛|左臂痛|冒冷汗|heart attack|chest pain|myocardial infarction',
-    caseSensitive: false,
-  ).hasMatch(query);
-}
-
-bool _isBurnQuery(String query) {
-  return RegExp(
-    r'烧伤|燒傷|烫伤|燙傷|热油烫|熱油燙|火烧伤|burns?|scald|thermal burn',
-    caseSensitive: false,
-  ).hasMatch(query);
-}
-
-bool _isRadiationQuery(String query) {
-  return RegExp(
-    r'核战|核戰|核爆|辐射|輻射|脏弹|髒彈|dirty bomb|radiation|nuclear|fallout|radiological',
-    caseSensitive: false,
-  ).hasMatch(query);
-}
-
-bool _isBioQuery(String query) {
-  return RegExp(
-    r'病毒袭击|病毒攻擊|生物袭击|生物攻擊|疫情|大流行|anthrax|biohazard|biological attack|pandemic|outbreak|隔离|隔離|传染|傳染',
-    caseSensitive: false,
-  ).hasMatch(query);
-}
-
-bool _isCyberQuery(String query) {
-  return RegExp(
-    r'ai攻击|ai攻擊|网络攻击|網絡攻擊|网络入侵|網絡入侵|cyberattack|cyber attack|ransomware|power outage|停电|停電|通信中断|通訊中斷|断网|斷網|infrastructure failure',
-    caseSensitive: false,
-  ).hasMatch(query);
-}
-
-bool _isConflictQuery(String query) {
-  return RegExp(
-    r'战争|戰爭|炮击|炮擊|轰炸|轟炸|爆炸|枪击|槍擊|空袭|空襲|war zone|blast|explosion|active shooter',
-    caseSensitive: false,
-  ).hasMatch(query);
-}
 
 String _entrySourceText(KnowledgeEntry entry) {
   return <String>[
@@ -229,90 +73,46 @@ double _sourceIntentBoost(KnowledgeEntry entry, String query) {
   final sourceText = _entrySourceText(entry);
   var boost = 0.0;
 
-  if (_isOutdoorSurvivalQuery(query)) {
-    if (RegExp(r'national park service|nps\.gov|weather\.gov|noaa|ready\.gov|cdc',
-                caseSensitive: false)
-            .hasMatch(sourceText) &&
-        RegExp(
-          r'survival_|outdoor|trip plan|ten essentials|wilderness|lightning|flood|heat|hypothermia|tick|poisonous plants|venomous snakes|venomous spiders',
-          caseSensitive: false,
-        ).hasMatch(sourceText)) {
-      boost += 26;
-    }
-
-    if (RegExp(r'fm 21-76|us army', caseSensitive: false)
-            .hasMatch(sourceText) &&
-        !RegExp(r'战争|戰爭|war|combat|军事|軍事|核战|核戰', caseSensitive: false)
-            .hasMatch(query)) {
-      boost -= 10;
-    }
-
-    if (RegExp(r'msd manual|merck manual|medlineplus|nhs', caseSensitive: false)
-            .hasMatch(sourceText) &&
-        RegExp(
-          r'野外|徒步|露营|露營|登山|迷路|断联|斷聯|没信号|沒有信號|庇护|庇護|取火|净水|淨水|天黑|求救|路线|路線|雷击|雷擊|雷暴|山洪|过夜|過夜',
-          caseSensitive: false,
-        ).hasMatch(query) &&
-        !RegExp(
-          r'蛇咬|蜘蛛|蜱虫|蜱蟲|毒植物|中暑|热射病|熱射病|失温|失溫|冻伤|凍傷|中毒|腹泻|腹瀉|呕吐|嘔吐|烧伤|燒傷|外伤|外傷|骨折',
-          caseSensitive: false,
-        ).hasMatch(query)) {
-      boost -= 8;
+  if (RegExp(r'首富|发财|發財|赚钱|賺錢|第一桶金|fortune|profit|rich|merchant|trade',
+          caseSensitive: false)
+      .hasMatch(query)) {
+    if (RegExp(r'mercantile|fortune line|merchant|ledger|brokerage|首富线|小本生意',
+            caseSensitive: false)
+        .hasMatch(sourceText)) {
+      boost += 32;
     }
   }
 
-  if (_isChestPainQuery(query) &&
-      RegExp(
-        r'heart attack|myocardial infarction|acute coronary|cardiac|coronary|chest pain|胸痛|心梗|压榨痛',
-        caseSensitive: false,
-      ).hasMatch(sourceText)) {
-    boost += 34;
-  }
-
-  if (_isBurnQuery(query)) {
-    if (RegExp(
-      r'burn|burns|scald|thermal burn|烧伤|燒傷|烫伤|燙傷',
-      caseSensitive: false,
-    ).hasMatch(sourceText)) {
+  if (RegExp(r'上位|掌权|掌權|皇帝|宫廷|宮廷|court|faction|patronage|power|influence',
+          caseSensitive: false)
+      .hasMatch(query)) {
+    if (RegExp(r'court|patronage|power line|household|legitimacy|上位线|门路',
+            caseSensitive: false)
+        .hasMatch(sourceText)) {
       boost += 30;
     }
+  }
 
-    if (RegExp(r'fm 21-76|us army', caseSensitive: false)
+  if (RegExp(r'避坑|保命|别暴露|別暴露|融入|blend in|fatal mistake|cover story|etiquette',
+          caseSensitive: false)
+      .hasMatch(query)) {
+    if (RegExp(r'arrival survival|fatal mistakes|cover story|blend in|避坑线|礼法',
+            caseSensitive: false)
         .hasMatch(sourceText)) {
-      boost -= 12;
+      boost += 28;
     }
   }
 
-  if (_isRadiationQuery(query) &&
-      RegExp(
-        r'crisis_radiation|radiation|nuclear|radiological|fallout|dirty bomb|ready\.gov|cdc',
-        caseSensitive: false,
-      ).hasMatch(sourceText)) {
-    boost += 30;
-  }
-
-  if (_isBioQuery(query) &&
-      RegExp(
-        r'crisis_bio|biohazard|pandemic|anthrax|hazmat|ready\.gov|cdc',
-        caseSensitive: false,
-      ).hasMatch(sourceText)) {
-    boost += 26;
-  }
-
-  if (_isCyberQuery(query) &&
-      RegExp(
-        r'crisis_cyber|cyber|power outage|communications outage|get-tech-ready|infrastructure failure|ready\.gov|cisa',
-        caseSensitive: false,
-      ).hasMatch(sourceText)) {
-    boost += 28;
-  }
-
-  if (_isConflictQuery(query) &&
-      RegExp(
-        r'crisis_conflict|explosion|hard cover|shelter in place|public-spaces|ready\.gov|radiation',
-        caseSensitive: false,
-      ).hasMatch(sourceText)) {
-    boost += 24;
+  if (RegExp(
+          r'技术|技術|发明|發明|工艺|工藝|现代知识|modern edge|process|standardization|workshop',
+          caseSensitive: false)
+      .hasMatch(query)) {
+    if (RegExp(
+            r'modern edge|process|standardization|workshop|supply chain|现代知识外挂',
+            caseSensitive: false)
+        .hasMatch(sourceText)) {
+      boost += 30;
+    }
   }
 
   return boost;

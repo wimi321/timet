@@ -91,21 +91,23 @@ class TriageService {
         _languageNames[_baseLanguage(normalizedLocale)] ??
         'English';
     return [
-      'You are Beacon, an offline survival and first-aid assistant.',
+      'You are Timet, an offline time-travel strategy assistant.',
       'Respond strictly in $languageName ($locale).',
       if (normalizedLocale == 'ar')
-        'Use natural right-to-left Arabic phrasing and avoid mixing English unless medically necessary.',
+        'Use natural right-to-left Arabic phrasing and avoid mixing English unless historically necessary.',
       'Treat each request as self-contained unless the same session explicitly continues.',
       'If the input says SESSION_RESET: true, discard any prior conversation state but keep the model warm.',
-      'Only use the provided authoritative evidence.',
-      'If authoritative evidence is missing or weak, you must still answer and clearly label the answer as limited-evidence guidance.',
-      'Do not start the answer with generic caveats such as "AI generated" or "evidence is limited".',
-      'Put actionable rescue guidance first; disclaimer text is handled separately by the app.',
-      'For wilderness, conflict, radiation, biohazard, and cyber-failure incidents, order the answer as immediate survival actions, then forbidden actions, then when to evacuate or call for help.',
-      'Do not invent medicine, dosage, invasive procedures, or diagnosis.',
-      'Do not reuse canned wording across different incidents; tailor the answer to the latest symptoms, injury mechanism, and danger signs.',
-      'Return 4 to 6 concise numbered rescue steps when grounded evidence exists, otherwise 3 to 5.',
-      'Mention contraindications when the evidence lists them.',
+      'The user should supply era, place, identity, resources, and goal in the prompt.',
+      'If era or place is missing, ask briefly for the missing context and do not invent the background.',
+      'Prefer the fortune line first unless the user clearly asks for power, court, faction, military, or rule.',
+      'Use the provided Timet knowledge pack as grounding when it is relevant.',
+      'If grounded knowledge is missing or weak, still answer as a limited route brief instead of pretending certainty.',
+      'Keep the advice historically plausible, resource-constrained, and framed for fictional or historical time-travel scenarios.',
+      'Downgrade modern knowledge into what the stated era, materials, skills, and social position can realistically absorb.',
+      'Avoid real-world harm tutorials, medical dosing, modern weapon construction, or operational violence.',
+      'Do not start with generic caveats such as "AI generated" or "evidence is limited"; disclaimer text is handled separately by the app.',
+      'Structure the final answer into exactly five markdown sections: Current Read, First Three Moves, Riches / Power Path, Do Not Expose, Ask Me Next.',
+      'Each section should be concise, concrete, and usable as a strategist brief.',
     ].join(' ');
   }
 
@@ -115,22 +117,22 @@ class TriageService {
     required String groundingContext,
   }) {
     return [
-      'USER_EMERGENCY: ${request.userText}',
-      if (request.categoryHint != null)
-        'CATEGORY_HINT: ${request.categoryHint}',
+      'USER_TIME_TRAVEL_BRIEF: ${request.userText}',
+      if (request.categoryHint != null) 'ROUTE_HINT: ${request.categoryHint}',
       'SESSION_ID: ${request.sessionId}',
       'SESSION_RESET: ${request.resetContext}',
       if (evidence.matchedCategories.isNotEmpty)
-        'MATCHED_CATEGORIES: ${evidence.matchedCategories.join(', ')}',
-      'EVIDENCE_CONFIDENCE: ${evidence.hasAuthoritativeEvidence ? 'authoritative' : 'limited'}',
-      'AUTHORITATIVE_CONTEXT:\n$groundingContext',
-      'OUTPUT_FORMAT:',
-      '1. One-line condition summary.',
-      '2. Numbered rescue steps with enough detail to act immediately.',
-      '3. One line listing forbidden actions if any exist in the evidence.',
-      '4. One escalation line telling user when to seek human help.',
+        'MATCHED_ROUTES: ${evidence.matchedCategories.join(', ')}',
+      'KNOWLEDGE_CONFIDENCE: ${evidence.hasAuthoritativeEvidence ? 'grounded' : 'limited'}',
+      'ROUTE_KNOWLEDGE:\n$groundingContext',
+      'OUTPUT_CONTRACT:',
+      '1. Current Read - assess the board before moving.',
+      '2. First Three Moves - three low-barrier steps the traveler can start now.',
+      '3. Riches / Power Path - the main climb, usually money before influence.',
+      '4. Do Not Expose - what would make the traveler look uncanny, dangerous, or fraudulent.',
+      '5. Ask Me Next - the best follow-up question, preferably split into 7 / 30 / 90 days.',
       if (!evidence.hasAuthoritativeEvidence)
-        '5. Keep the wording scenario-specific; do not prepend generic limited-evidence caveats.',
+        'Keep the wording scenario-specific; do not prepend generic limited-evidence caveats.',
     ].join('\n\n');
   }
 
@@ -167,48 +169,48 @@ class TriageService {
     switch (normalized) {
       case 'zh-cn':
       case 'zh':
-        return 'AI 仅供断网绝境下自救参考，一旦恢复通信，请立刻联系专业急救人员。';
+        return '这条路线基于本地 Timet 知识包，可作为穿越军师简报使用，不要当成神谕照抄。';
       case 'zh-tw':
-        return 'AI 僅供斷網絕境下自救參考，一旦恢復通訊，請立刻聯絡專業急救人員。';
+        return '這條路線基於本地 Timet 知識包，可作為穿越軍師簡報使用，不要當成神諭照抄。';
       case 'ja':
-        return 'このAI案内は通信断絶時の自助用です。通信が回復したら直ちに専門の救急支援を要請してください。';
+        return 'このルートはローカル Timet ナレッジパックに基づく軍師ブリーフです。予言として鵜呑みにしないでください。';
       case 'ko':
-        return '이 AI 안내는 통신이 끊긴 극한 상황에서의 자가 구조 참고용입니다. 통신이 복구되면 즉시 전문 응급 구조를 요청하세요.';
+        return '이 경로는 로컬 Timet 지식 팩에 기반한 전략 브리프입니다. 예언처럼 맹신하지 마세요.';
       case 'ar':
-        return 'هذا التوجيه من الذكاء الاصطناعي مخصص للمساعدة الذاتية عند انقطاع الاتصال. عند عودة الاتصال اطلب المساعدة الطبية المتخصصة فوراً.';
+        return 'هذا المسار يستند إلى حزمة معرفة Timet المحلية. استخدمه كمذكرة استراتيجية لا كنبوءة.';
     }
 
     switch (base) {
       case 'es':
-        return 'Esta guia de IA es solo para autoayuda sin conexion. En cuanto vuelva la comunicacion, contacta de inmediato a los servicios de emergencia profesionales.';
+        return 'Esta ruta se basa en el paquete local de Timet. Usala como informe estrategico, no como profecia.';
       case 'fr':
-        return "Cette aide IA sert uniquement a l'auto-assistance hors ligne. Des que la communication revient, contactez immediatement les secours professionnels.";
+        return "Cette route s'appuie sur le pack local de Timet. Utilisez-la comme note strategique, pas comme prophetie.";
       case 'de':
-        return 'Diese KI-Hilfe dient nur zur Selbstrettung ohne Verbindung. Sobald Kommunikation moglich ist, sofort professionelle Notfallhilfe kontaktieren.';
+        return 'Diese Route basiert auf dem lokalen Timet-Wissenspaket. Nutze sie als Strategienotiz, nicht als Prophezeiung.';
       case 'pt':
-        return 'Esta orientacao por IA serve apenas para autoajuda offline. Assim que a comunicacao voltar, acione imediatamente o socorro profissional.';
+        return 'Esta rota se baseia no pacote local da Timet. Use como briefing estrategico, nao como profecia.';
       case 'ru':
-        return 'Эта подсказка ИИ предназначена только для самопомощи при отсутствии связи. Как только связь восстановится, немедленно обратитесь к профессиональным спасателям.';
+        return 'Этот маршрут основан на локальном пакете знаний Timet. Используйте его как стратегическую записку, а не как пророчество.';
       case 'hi':
-        return 'यह AI मार्गदर्शन केवल संचार न होने की स्थिति में आत्मरक्षा हेतु है। जैसे ही संचार लौटे, तुरंत पेशेवर आपात सहायता लें।';
+        return 'यह मार्ग स्थानीय Timet ज्ञान पैक पर आधारित है। इसे रणनीतिक संक्षेप की तरह उपयोग करें, भविष्यवाणी की तरह नहीं।';
       case 'id':
-        return 'Panduan AI ini hanya untuk bantuan mandiri saat offline. Segera hubungi bantuan darurat profesional saat komunikasi kembali pulih.';
+        return 'Rute ini berdasar paket pengetahuan lokal Timet. Gunakan sebagai ringkasan strategi, bukan ramalan.';
       case 'it':
-        return 'Questa guida AI serve solo per l autosoccorso offline. Appena torna la comunicazione, contatta subito i soccorsi professionali.';
+        return 'Questa rotta si basa sul pacchetto locale Timet. Usala come briefing strategico, non come profezia.';
       case 'tr':
-        return 'Bu yapay zeka yonlendirmesi yalnizca baglanti yokken kendi kendine yardim icindir. Iletisim geri gelir gelmez profesyonel acil yardim isteyin.';
+        return 'Bu rota yerel Timet bilgi paketine dayanir. Kehanet degil, strateji notu olarak kullanin.';
       case 'vi':
-        return 'Huong dan AI nay chi dung cho tu cuu khi mat lien lac. Ngay khi lien lac duoc khoi phuc, hay lien he ho tro cap cuu chuyen nghiep.';
+        return 'Tuyen nay dua tren goi kien thuc cuc bo cua Timet. Hay xem nhu ban tom tat chien luoc, khong phai loi tien tri.';
       case 'th':
-        return 'คำแนะนำจาก AI นี้ใช้เพื่อการช่วยเหลือตนเองเมื่อขาดการสื่อสารเท่านั้น เมื่อสื่อสารได้อีกครั้งให้ติดต่อหน่วยฉุกเฉินทันที';
+        return 'เส้นทางนี้อ้างอิงชุดความรู้ในเครื่องของ Timet ใช้เป็นบันทึกกลยุทธ์ ไม่ใช่คำทำนาย';
       case 'nl':
-        return 'Deze AI-hulp is alleen bedoeld voor zelfredzaamheid zonder verbinding. Neem direct contact op met professionele hulp zodra communicatie terugkeert.';
+        return 'Deze route is gebaseerd op het lokale Timet-kennispakket. Gebruik haar als strategiebrief, niet als profetie.';
       case 'pl':
-        return 'Ta pomoc AI sluzy wylacznie do samoratunku bez lacznosci. Gdy tylko lacznosc wroci, natychmiast skontaktuj sie z profesjonalna pomoca ratunkowa.';
+        return 'Ta trasa opiera sie na lokalnym pakiecie wiedzy Timet. Traktuj ja jak notatke strategiczna, nie proroctwo.';
       case 'uk':
-        return 'Ця підказка ШІ призначена лише для самодопомоги без зв’язку. Щойно зв’язок відновиться, негайно зверніться по професійну допомогу.';
+        return 'Цей маршрут спирається на локальний пакет знань Timet. Використовуйте його як стратегічну записку, а не пророцтво.';
       default:
-        return 'This AI guidance is only for self-rescue during communication loss. Contact professional emergency responders immediately once communication is restored.';
+        return 'This route is grounded in the local Timet knowledge pack. Use it as a strategist brief, not a prophecy.';
     }
   }
 
@@ -219,23 +221,23 @@ class TriageService {
     switch (normalized) {
       case 'zh-cn':
       case 'zh':
-        return '当前回答已调用 AI 生成，但本地权威证据不足；请将其视为有限证据下的最佳努力建议，并在恢复通信后立刻联系专业急救人员。';
+        return '这条路线由本地模型在有限知识下推演而成。把时代、地点、身份和资源说得更清楚，Timet 才能给得更准。';
       case 'zh-tw':
-        return '目前回答已呼叫 AI 生成，但本地權威證據不足；請將其視為有限證據下的最佳努力建議，並在恢復通訊後立刻聯絡專業急救人員。';
+        return '這條路線由本地模型在有限知識下推演而成。把時代、地點、身份和資源說得更清楚，Timet 才能給得更準。';
       case 'ja':
-        return 'この回答はAIが生成していますが、手元の権威エビデンスは十分ではありません。限定的な根拠に基づく最善努力の案内として扱い、通信回復後は直ちに専門救助を要請してください。';
+        return 'このルートはローカルモデルが限られた知識から推論したものです。時代・場所・身分・資源を詳しく書くほど精度が上がります。';
       case 'ko':
-        return '이 답변은 AI가 생성했지만 로컬 권위 근거는 충분하지 않습니다. 제한된 근거에서 나온 최선의 안내로 보고, 통신이 복구되면 즉시 전문 구조를 요청하세요.';
+        return '이 경로는 로컬 모델이 제한된 지식으로 추론한 것입니다. 시대, 장소, 신분, 자원을 더 자세히 적을수록 Timet이 더 정확해집니다.';
       case 'ar':
-        return 'تم إنشاء هذه الإجابة بواسطة الذكاء الاصطناعي، لكن الأدلة المرجعية المحلية غير كافية. تعامل معها كإرشاد بأفضل جهد مع أدلة محدودة، واطلب المساعدة المتخصصة فور عودة الاتصال.';
+        return 'هذا المسار استنتاج محلي بمعرفة محدودة. اذكر العصر والمكان والهوية والموارد بدقة أكبر لتحصل على خطة أدق.';
       default:
         switch (base) {
           case 'es':
-            return 'Esta respuesta fue generada por IA, pero la evidencia local autorizada es limitada. Trátala como una guía de mejor esfuerzo y contacta a emergencias profesionales en cuanto vuelva la comunicación.';
+            return 'Esta ruta fue inferida por el modelo local con conocimiento limitado. Anade epoca, lugar, identidad y recursos para mayor precision.';
           case 'fr':
-            return "Cette reponse est generee par l'IA, mais les preuves locales fiables sont limitees. Traitez-la comme une aide au mieux de ses capacites et contactez les secours des que la communication revient.";
+            return "Cette route est inferee par le modele local avec des connaissances limitees. Precisez l'epoque, le lieu, l'identite et les ressources pour plus de precision.";
           default:
-            return 'This answer was generated by AI, but local authoritative evidence is limited. Treat it as best-effort guidance and contact professional emergency responders as soon as communication is restored.';
+            return 'This route was inferred by the local model with limited knowledge. Add era, place, identity, and resources for a sharper Timet brief.';
         }
     }
   }
@@ -273,7 +275,7 @@ class TriageService {
     return [
       TriageStep(
         order: 1,
-        title: 'Emergency Guidance',
+        title: 'Route Brief',
         instruction: text.trim(),
         isCritical: true,
       ),
