@@ -317,10 +317,28 @@ export default function App() {
   }, [bridge, isBootstrapping, locale, modelLoadFailure, modelPreparingMessage, modelRequiredMessage, t]);
 
   useEffect(() => {
-    if (!chatAreaRef.current) {
+    const chatArea = chatAreaRef.current;
+    if (!chatArea) {
       return;
     }
-    chatAreaRef.current.scrollTop = chatAreaRef.current.scrollHeight;
+    if (messages.length === 0 && !isStreaming) {
+      chatArea.scrollTop = 0;
+      return;
+    }
+
+    const latestMessage = messages[messages.length - 1];
+    if (latestMessage?.sender === 'ai' && !latestMessage.isStreaming) {
+      window.requestAnimationFrame(() => {
+        const aiMessages = chatArea.querySelectorAll<HTMLElement>('.message.ai');
+        const latestAiMessage = aiMessages[aiMessages.length - 1];
+        if (latestAiMessage) {
+          chatArea.scrollTop = Math.max(0, latestAiMessage.offsetTop - chatArea.offsetTop - 8);
+        }
+      });
+      return;
+    }
+
+    chatArea.scrollTop = chatArea.scrollHeight;
   }, [messages, isStreaming]);
 
   const activeModel = useMemo(

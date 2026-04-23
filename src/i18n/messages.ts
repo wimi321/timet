@@ -19,6 +19,10 @@ export type TranslationKey =
   | 'hero.default_rule'
   | 'hero.example_title'
   | 'hero.example_query'
+  | 'hero.trust_label'
+  | 'hero.meta_offline'
+  | 'hero.meta_route_pack'
+  | 'hero.meta_web_preview'
   | 'route.wealth.label'
   | 'route.wealth.text'
   | 'route.power.label'
@@ -100,6 +104,10 @@ const enDict: Record<TranslationKey, string> = {
   'hero.default_rule': 'Default rule: Timet prioritizes the fortune line unless you clearly ask for power.',
   'hero.example_title': 'Good prompt example',
   'hero.example_query': 'Regency London, basic literacy, a few guineas, I want wealth and influence fast. What is the first path?',
+  'hero.trust_label': 'Timet capability highlights',
+  'hero.meta_offline': 'Offline-first',
+  'hero.meta_route_pack': 'Route pack ready',
+  'hero.meta_web_preview': 'Web preview works',
   'route.wealth.label': 'Fortune Line',
   'route.wealth.text': 'I am in a functioning market society and want the fastest realistic path to my first fortune.',
   'route.power.label': 'Power Line',
@@ -182,6 +190,10 @@ const zhCnDict: Partial<Record<TranslationKey, string>> = {
   'hero.default_rule': '默认规则：Timet 会先给首富线；你要上位，就直接在问题里说。',
   'hero.example_title': '推荐提问',
   'hero.example_query': '我在北宋汴京，识字，有一点碎银，想先发财再结交权贵，第一步怎么走？',
+  'hero.trust_label': 'Timet 能力亮点',
+  'hero.meta_offline': '离线优先',
+  'hero.meta_route_pack': '路线包已就绪',
+  'hero.meta_web_preview': 'Web 即开即试',
   'route.wealth.label': '首富线',
   'route.wealth.text': '我在一个有基本市镇秩序的时代，想从小本生意做出第一桶金。',
   'route.power.label': '上位线',

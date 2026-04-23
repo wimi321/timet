@@ -25,6 +25,7 @@ export function RouteGrid({ routeActions, onQuickAction, onVisualAnalysis }: Rou
           <button
             key={action.label}
             className="route-card"
+            data-route={action.categoryHint}
             style={{ animationDelay: `${120 + index * 80}ms` }}
             onClick={() => onQuickAction(action.categoryHint, action.userText)}
             type="button"
