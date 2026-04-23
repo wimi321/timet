@@ -76,10 +76,10 @@ export function formatModelSizeLabel(
   model: ModelDescriptor,
   localize: ReturnType<typeof useI18n>['t'],
 ): string {
-  if (model.id === 'gemma-4-e2b' || model.tier === 'e2b') {
+  if (model.id === 'gemma-4-e2b') {
     return localize('model.size_e2b');
   }
-  if (model.id === 'gemma-4-e4b' || model.tier === 'e4b') {
+  if (model.id === 'gemma-4-e4b') {
     return localize('model.size_e4b');
   }
   return model.sizeLabel;

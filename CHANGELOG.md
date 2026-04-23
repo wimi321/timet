@@ -2,6 +2,26 @@
 
 All notable changes to Timet will be documented in this file.
 
+## v0.2.1 - 2026-04-24
+
+Web preview and release polish for the public project.
+
+### Web Preview
+
+- Added a browser knowledge bridge so the Web app can answer immediately without native Gemma setup
+- Kept the Web preview fully local by using the bundled route knowledge pack instead of a server fallback
+- Added tests for the browser route model, diagnostics, and English historical prompt handling
+
+### Documentation
+
+- Updated README and Chinese README to explain the Web preview plus native Gemma 4 split accurately
+- Updated the architecture diagram to show `browserKnowledgeBridge.ts`
+- Aligned the APK badge, changelog, and release narrative with v0.2.1
+
+### Version
+
+- Bumped package, Dart, Android, and iOS versions to v0.2.1
+
 ## v0.2.0 - 2026-04-19
 
 Comprehensive UX polish, accessibility improvements, and full i18n expansion.

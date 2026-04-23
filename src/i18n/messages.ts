@@ -94,7 +94,7 @@ const enDict: Record<TranslationKey, string> = {
   'power.normal.active': 'Standard runtime',
   'power.normal.toggle': 'Restore standard runtime',
   'hero.kicker': 'TIME-TRAVEL STRATEGY ASSISTANT',
-  'hero.title': 'Name the era. Take the first fortune.',
+  'hero.title': 'Name the era. Build your first fortune.',
   'hero.subtitle': 'Tell Timet the era, place, identity, resources, and goal. It will draft your wealth line or power line.',
   'hero.input_rule': 'Prompt formula: era + place + identity + resources + goal',
   'hero.default_rule': 'Default rule: Timet prioritizes the fortune line unless you clearly ask for power.',

@@ -31,7 +31,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/wimi321/timet/releases/latest/download/timet-v0.2.0-arm64.apk">
+  <a href="https://github.com/wimi321/timet/releases/latest/download/timet-v0.2.1-arm64.apk">
     <img alt="Download APK" src="https://img.shields.io/badge/Download%20APK-arm64-2ea44f?style=for-the-badge&logo=android&logoColor=white">
   </a>
 </p>
@@ -80,14 +80,21 @@ Tell Timet the **era**, **place**, **identity**, **starting resources**, and **g
 ## Features
 
 - **Gemma 4 on your phone** — Runs Google's Gemma 4 (2B / 4B) locally via LiteRT. No internet required after setup. Your strategist survives the time-travel with you.
-- **100% offline architecture** — Bundled knowledge packs + on-device model. No cloud, no API key, no subscription. Works in airplane mode, works in the wrong century.
+- **100% offline architecture** — Bundled knowledge packs + on-device model. No cloud, no API key, no subscription. Works in airplane mode, works after time travel.
+- **Instant Web preview** — The browser build now answers with the same offline route pack, so visitors can try Timet before installing the native app.
 - **Route-first, not lore-first** — Timet gives you a playable path, not a wall of background trivia.
 - **Structured answers** — Every reply converges on five sections: situation read, first moves, main path, fatal mistakes, and next question.
 - **8 languages** — English, Simplified Chinese, Traditional Chinese, Japanese, Korean, Spanish, French, and German deep-adapted.
 - **Cross-platform** — One codebase ships to Web, Android, and iOS via Capacitor.
 
 <details>
-<summary><strong>What's New in v0.2.0</strong></summary>
+<summary><strong>What's New in v0.2.1</strong></summary>
+
+- Web preview now works immediately with a local browser knowledge bridge
+- README and architecture docs now explain the Web preview + native Gemma split accurately
+- Release metadata, Android/iOS versions, and APK badge are aligned for v0.2.1
+
+### Also included from v0.2.0
 
 - Auto-resizing textarea for multi-line prompts (Enter to send, Shift+Enter for newline)
 - CSS animations: staggered card entrance, message slide-in, modal slide-up
@@ -107,7 +114,7 @@ Tell Timet the **era**, **place**, **identity**, **starting resources**, and **g
   <img src="./docs/assets/timet-architecture.svg" alt="Timet architecture diagram" width="100%">
 </p>
 
-Timet runs a **dual-stack** architecture: a React 18 frontend communicates with a Dart backend through a native bridge abstraction. On mobile, the Capacitor bridge routes requests to on-device Gemma 4 inference via LiteRT, with offline knowledge retrieval via RAG. On the web, a strict bridge enforces that no server dependency exists. Everything runs locally — no cloud, no API keys.
+Timet runs a **dual-stack** architecture: a React 18 frontend talks to a bridge abstraction. On mobile, the Capacitor bridge routes requests to on-device Gemma 4 inference via LiteRT, with offline knowledge retrieval via RAG. On the web, the browser knowledge bridge runs the same offline route pack as an instant preview. Everything runs locally — no cloud, no API keys.
 
 ## How It Works
 

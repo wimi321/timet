@@ -31,7 +31,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/wimi321/timet/releases/latest/download/timet-v0.2.0-arm64.apk">
+  <a href="https://github.com/wimi321/timet/releases/latest/download/timet-v0.2.1-arm64.apk">
     <img alt="下载 APK" src="https://img.shields.io/badge/%E4%B8%8B%E8%BD%BD%20APK-arm64-2ea44f?style=for-the-badge&logo=android&logoColor=white">
   </a>
 </p>
@@ -81,13 +81,20 @@
 
 - **手机上跑 Gemma 4 大模型** — 通过 LiteRT 在手机端本地运行 Google Gemma 4（2B / 4B）。安装后不再需要联网。你的军师跟你一起穿越。
 - **100% 离线架构** — 内置知识包 + 端侧模型推理。无云服务、无 API Key、无订阅费。飞行模式能用，北宋也能用。
+- **Web 端即开即试** — 浏览器版本会直接调用本地路线知识包回答，用户不用先装 App 也能体验 Timet 的核心问答。
 - **先给路线，不先堆设定** — 重点是怎么走，不是背景故事复述。
 - **五段式结构化回答** — 每条回复都收敛为：局面判断、先走三步、主路径、避坑项、下一步该问什么。
 - **8 种语言** — 英文、简体中文、繁体中文、日语、韩语、西班牙语、法语、德语深度适配，所有界面文本均有完整翻译。
 - **全平台** — 一套代码通过 Capacitor 发布到 Web、Android 和 iOS。
 
 <details>
-<summary><strong>v0.2.0 新特性</strong></summary>
+<summary><strong>v0.2.1 新特性</strong></summary>
+
+- Web 预览版现在可直接用本地浏览器知识桥接回答问题
+- README 和架构说明已准确区分 Web 预览与移动端 Gemma 4 推理
+- Release 元数据、Android/iOS 版本号与 APK 下载徽章已统一到 v0.2.1
+
+### 同时包含 v0.2.0 的打磨
 
 - 聊天输入升级为自动调高的多行 textarea（Enter 发送，Shift+Enter 换行）
 - CSS 动画：路由卡片交错入场、消息滑入、模型面板底部滑入
@@ -107,7 +114,7 @@
   <img src="./docs/assets/timet-architecture.svg" alt="Timet 架构图" width="100%">
 </p>
 
-Timet 采用**双栈架构**：React 18 前端通过原生桥接抽象层与 Dart 后端通信。移动端通过 Capacitor 桥接，将请求路由到端侧 Gemma 4 推理引擎（LiteRT），并通过 RAG 检索离线知识包。Web 端使用严格桥接，确保零服务器依赖。一切在本地运行——无需云服务、无需 API Key。
+Timet 采用**双栈架构**：React 18 前端通过桥接抽象层发起请求。移动端通过 Capacitor 桥接，将请求路由到端侧 Gemma 4 推理引擎（LiteRT），并通过 RAG 检索离线知识包。Web 端使用浏览器知识桥接，直接调用同一套离线路线包做即时预览。一切在本地运行——无需云服务、无需 API Key。
 
 ## 工作原理
 

@@ -1,7 +1,7 @@
 {
   "name": "timet",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.2.1",
   "type": "module",
   "description": "An offline-first time-travel strategist app. Tell it the era, place, and goal — get a structured route to wealth, power, or survival.",
   "keywords": [
