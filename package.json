@@ -54,7 +54,7 @@
     "react-markdown": "^10.1.0"
   },
   "devDependencies": {
-    "@capacitor/android": "^8.3.0",
+    "@capacitor/android": "^8.3.1",
     "@capacitor/cli": "^8.3.0",
     "@capacitor/ios": "^8.3.0",
     "@testing-library/jest-dom": "^6.6.3",
