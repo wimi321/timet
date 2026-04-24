@@ -8,14 +8,16 @@ if (keystorePropertiesFile.exists()) {
 }
 
 def bundledGemmaArtifact = file('../../.artifacts/gemma-4-E2B-it.litertlm')
-def generatedBundledAssetsDir = layout.buildDirectory.dir('generated/beacon-bundled-assets').get().asFile
+def generatedBundledAssetsDir = layout.buildDirectory.dir('generated/timet-bundled-assets').get().asFile
 def generatedBundledModelsDir = new File(generatedBundledAssetsDir, 'models')
 def stagedBundledGemmaFile = new File(generatedBundledModelsDir, 'gemma-4-E2B-it.litertlm')
-def bundleGemmaInApk = providers.gradleProperty('beaconBundleGemmaInApk')
+def bundleGemmaInApk = providers.gradleProperty('timetBundleGemmaInApk')
+    .orElse(providers.gradleProperty('beaconBundleGemmaInApk'))
     .map { it.toBoolean() }
     .orElse(true)
     .get()
-def arm64OnlyBuild = providers.gradleProperty('beaconArm64Only')
+def arm64OnlyBuild = providers.gradleProperty('timetArm64Only')
+    .orElse(providers.gradleProperty('beaconArm64Only'))
     .map { it.toBoolean() }
     .orElse(false)
     .get()
@@ -52,14 +54,14 @@ tasks.register('stageBundledGemmaE2B') {
                 stagedBundledGemmaFile.toPath(),
                 bundledGemmaArtifact.toPath(),
             )
-            logger.lifecycle("Beacon: staged Gemma 4 E2B via hard link at ${stagedBundledGemmaFile.absolutePath}")
+            logger.lifecycle("Timet: staged Gemma 4 E2B via hard link at ${stagedBundledGemmaFile.absolutePath}")
         } catch (Exception ignored) {
             copy {
                 from bundledGemmaArtifact
                 into stagedBundledGemmaFile.parentFile
                 rename { 'gemma-4-E2B-it.litertlm' }
             }
-            logger.lifecycle("Beacon: staged Gemma 4 E2B via file copy at ${stagedBundledGemmaFile.absolutePath}")
+            logger.lifecycle("Timet: staged Gemma 4 E2B via file copy at ${stagedBundledGemmaFile.absolutePath}")
         }
     }
 }
@@ -78,11 +80,11 @@ android {
         }
     }
     defaultConfig {
-        applicationId "com.beacon.sos"
+        applicationId "com.wimi321.timet"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 4
-        versionName "0.2.1"
+        versionCode 5
+        versionName "0.3.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         if (arm64OnlyBuild) {
             ndk {

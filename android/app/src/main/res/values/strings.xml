@@ -2,6 +2,6 @@
 <resources>
     <string name="app_name">Timet</string>
     <string name="title_activity_main">Timet</string>
-    <string name="package_name">com.beacon.sos</string>
-    <string name="custom_url_scheme">com.beacon.sos</string>
+    <string name="package_name">com.wimi321.timet</string>
+    <string name="custom_url_scheme">com.wimi321.timet</string>
 </resources>

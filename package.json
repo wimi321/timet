@@ -1,9 +1,9 @@
 {
   "name": "timet",
   "private": true,
-  "version": "0.2.1",
+  "version": "0.3.0",
   "type": "module",
-  "description": "An offline-first time-travel strategist app. Tell it the era, place, and goal — get a structured route to wealth, power, or survival.",
+  "description": "An app for time travelers. Offline-first strategy routes for wealth, power, survival, and modern-edge leverage.",
   "keywords": [
     "time-travel",
     "strategy",
@@ -36,7 +36,7 @@
     "mobile:android": "npm run mobile:build && cap open android",
     "mobile:ios": "npm run mobile:build && cap open ios",
     "mobile:android:release": "npm run mobile:build && cd android && JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home PATH=/opt/homebrew/opt/openjdk@21/bin:$PATH ./gradlew assembleRelease bundleRelease",
-    "mobile:android:release:github": "npm run mobile:build && cd android && JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home PATH=/opt/homebrew/opt/openjdk@21/bin:$PATH ./gradlew assembleRelease -PbeaconBundleGemmaInApk=false -PbeaconArm64Only=true"
+    "mobile:android:release:github": "npm run mobile:build && cd android && JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home PATH=/opt/homebrew/opt/openjdk@21/bin:$PATH ./gradlew assembleRelease -PtimetBundleGemmaInApk=false -PtimetArm64Only=true"
   },
   "dependencies": {
     "@capacitor/app": "^8.1.0",

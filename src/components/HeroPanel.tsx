@@ -7,6 +7,7 @@ export function HeroPanel() {
     <>
       <section className="hero-panel">
         <div className="hero-ambient" aria-hidden="true" />
+        <img className="hero-brand-mark" src="/icon-192.png" alt="" aria-hidden="true" />
         <p className="hero-kicker">{t('hero.kicker')}</p>
         <h1>{t('hero.title')}</h1>
         <p className="hero-subtitle">{t('hero.subtitle')}</p>

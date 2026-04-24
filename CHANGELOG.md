@@ -2,6 +2,28 @@
 
 All notable changes to Timet will be documented in this file.
 
+## v0.3.0 - 2026-04-24
+
+Brand identity and install-experience polish.
+
+### Brand Assets
+
+- Added a new AI-generated Timet icon system based on an astrolabe, compass, and hourglass motif
+- Rebuilt favicons, PWA icons, Android launcher icons, and iOS app icon from the same master artwork
+- Added maskable PWA icons for better Android home-screen installation
+
+### Launch And Presentation
+
+- Replaced inherited white/fire splash screens with dark atlas-style Timet launch screens
+- Added a polished README hero image and social preview card
+- Updated Open Graph and Twitter metadata to use the new social card
+- Added the Timet mark to the in-app navigation and home hero
+
+### Native Identity
+
+- Updated the public Android application id, Capacitor app id, and iOS bundle identifier to `com.wimi321.timet`
+- Bumped package, Android, and iOS versions to v0.3.0
+
 ## v0.2.1 - 2026-04-24
 
 Web preview and release polish for the public project.

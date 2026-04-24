@@ -1,7 +1,7 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.beacon.sos',
+  appId: 'com.wimi321.timet',
   appName: 'Timet',
   webDir: 'dist',
   bundledWebRuntime: false,

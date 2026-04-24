@@ -35,6 +35,7 @@ export function NavBar({ showBack, onBack, title, statusLine }: NavBarProps) {
         </div>
 
         <div className="header-title">
+          <img className="brand-title-mark" src="/icon-192.png" alt="" aria-hidden="true" />
           <span>{title || brandTitleForLocale(locale)}</span>
         </div>
 

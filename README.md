@@ -1,6 +1,10 @@
 # Timet
 
 <p align="center">
+  <img src="./docs/assets/timet-icon.png" alt="Timet app icon" width="96" height="96">
+</p>
+
+<p align="center">
   <a href="https://github.com/wimi321/timet/releases">
     <img alt="Release" src="https://img.shields.io/github/v/release/wimi321/timet?style=flat-square">
   </a>
@@ -31,7 +35,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/wimi321/timet/releases/latest/download/timet-v0.2.1-arm64.apk">
+  <a href="https://github.com/wimi321/timet/releases/latest/download/timet-v0.3.0-arm64.apk">
     <img alt="Download APK" src="https://img.shields.io/badge/Download%20APK-arm64-2ea44f?style=for-the-badge&logo=android&logoColor=white">
   </a>
 </p>
@@ -51,7 +55,7 @@
 </p>
 
 <p align="center">
-  <img src="./docs/assets/timet-hero.svg" alt="Timet hero" width="100%">
+  <img src="./docs/assets/timet-hero.png" alt="Timet hero" width="100%">
 </p>
 
 Tell Timet the **era**, **place**, **identity**, **starting resources**, and **goal** — it drafts a playable strategy route for wealth, influence, cover, or modern-edge leverage. No lore dumps, no hand-waving. Every answer lands in a **structured five-part brief** you can act on immediately.
@@ -88,13 +92,17 @@ Tell Timet the **era**, **place**, **identity**, **starting resources**, and **g
 - **Cross-platform** — One codebase ships to Web, Android, and iOS via Capacitor.
 
 <details>
-<summary><strong>What's New in v0.2.1</strong></summary>
+<summary><strong>What's New in v0.3.0</strong></summary>
+
+- New AI-generated Timet icon system across Web, PWA, Android, and iOS
+- Dark atlas splash screens replace the old inherited launch artwork
+- README hero and social preview card now match the actual product UI
+- Native package identifiers now use the Timet app identity
+
+### Also included from v0.2.1 and v0.2.0
 
 - Web preview now works immediately with a local browser knowledge bridge
-- README and architecture docs now explain the Web preview + native Gemma split accurately
-- Release metadata, Android/iOS versions, and APK badge are aligned for v0.2.1
-
-### Also included from v0.2.0
+- README and architecture docs explain the Web preview + native Gemma split accurately
 
 - Auto-resizing textarea for multi-line prompts (Enter to send, Shift+Enter for newline)
 - CSS animations: staggered card entrance, message slide-in, modal slide-up

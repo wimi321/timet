@@ -1,6 +1,10 @@
 # 穿越助手 / Timet
 
 <p align="center">
+  <img src="./docs/assets/timet-icon.png" alt="Timet 应用图标" width="96" height="96">
+</p>
+
+<p align="center">
   <a href="https://github.com/wimi321/timet/releases">
     <img alt="Release" src="https://img.shields.io/github/v/release/wimi321/timet?style=flat-square">
   </a>
@@ -31,7 +35,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/wimi321/timet/releases/latest/download/timet-v0.2.1-arm64.apk">
+  <a href="https://github.com/wimi321/timet/releases/latest/download/timet-v0.3.0-arm64.apk">
     <img alt="下载 APK" src="https://img.shields.io/badge/%E4%B8%8B%E8%BD%BD%20APK-arm64-2ea44f?style=for-the-badge&logo=android&logoColor=white">
   </a>
 </p>
@@ -51,7 +55,7 @@
 </p>
 
 <p align="center">
-  <img src="./docs/assets/timet-hero.svg" alt="Timet hero" width="100%">
+  <img src="./docs/assets/timet-hero.png" alt="Timet hero" width="100%">
 </p>
 
 告诉 Timet 你的**时代**、**地点**、**身份**、**手里资源**和**目标**——它会给你一条能走的首富线、上位线、避坑线或现代知识外挂路线。不堆设定，不空谈背景。每条回答都收敛成**五段式军师简报**，拿到就能拆步骤执行。
@@ -88,13 +92,17 @@
 - **全平台** — 一套代码通过 Capacitor 发布到 Web、Android 和 iOS。
 
 <details>
-<summary><strong>v0.2.1 新特性</strong></summary>
+<summary><strong>v0.3.0 新特性</strong></summary>
 
-- Web 预览版现在可直接用本地浏览器知识桥接回答问题
-- README 和架构说明已准确区分 Web 预览与移动端 Gemma 4 推理
-- Release 元数据、Android/iOS 版本号与 APK 下载徽章已统一到 v0.2.1
+- 全新 AI 生成 Timet 图标系统，统一 Web、PWA、Android 和 iOS
+- 暗金星图启动页替换旧项目遗留的火焰启动图
+- README 首图与社交分享图统一成真实产品视觉
+- 原生包标识切换为 Timet 自己的应用身份
 
-### 同时包含 v0.2.0 的打磨
+### 同时包含 v0.2.1 与 v0.2.0 的打磨
+
+- Web 预览版可直接用本地浏览器知识桥接回答问题
+- README 和架构说明准确区分 Web 预览与移动端 Gemma 4 推理
 
 - 聊天输入升级为自动调高的多行 textarea（Enter 发送，Shift+Enter 换行）
 - CSS 动画：路由卡片交错入场、消息滑入、模型面板底部滑入

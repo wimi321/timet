@@ -178,7 +178,9 @@ button {
 .header-title {
   min-width: 0;
   display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 0.5rem;
   text-align: center;
   font-family:
     "Iowan Old Style",
@@ -191,6 +193,16 @@ button {
   letter-spacing: 0.02em;
   color: var(--accent-gold-bright);
   text-shadow: 0 0 28px rgba(247, 213, 138, 0.18);
+}
+
+.brand-title-mark {
+  width: 1.65rem;
+  height: 1.65rem;
+  flex: 0 0 auto;
+  border-radius: 0.45rem;
+  box-shadow:
+    0 0 0 1px rgba(247, 213, 138, 0.22),
+    0 0 24px rgba(247, 213, 138, 0.18);
 }
 
 .header-title span {
@@ -333,6 +345,18 @@ button {
     linear-gradient(160deg, rgba(24, 39, 35, 0.98), rgba(8, 14, 12, 0.96));
   border: 1px solid rgba(242, 204, 132, 0.26);
   animation: fadeSlideUp 0.48s cubic-bezier(.2, .8, .2, 1) both;
+}
+
+.hero-brand-mark {
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-bottom: 0.85rem;
+  border-radius: 1.15rem;
+  box-shadow:
+    0 0 0 1px rgba(247, 213, 138, 0.24),
+    0 18px 42px rgba(0, 0, 0, 0.34),
+    0 0 52px rgba(247, 213, 138, 0.2);
+  transform: rotate(-2deg);
 }
 
 .hero-panel::before {
@@ -1274,6 +1298,12 @@ html[dir="rtl"] .chat-input {
     font-size: 1rem;
   }
 
+  .brand-title-mark {
+    width: 1.45rem;
+    height: 1.45rem;
+    border-radius: 0.4rem;
+  }
+
   .language-select {
     max-width: 6.6rem;
     padding-inline-start: 0.68rem;
@@ -1284,6 +1314,13 @@ html[dir="rtl"] .chat-input {
     min-height: 15.4rem;
     padding: 1.15rem 1rem 0.9rem;
     background-position: 72% 46%;
+  }
+
+  .hero-brand-mark {
+    width: 3.7rem;
+    height: 3.7rem;
+    margin-bottom: 0.7rem;
+    border-radius: 0.95rem;
   }
 
   .hero-panel h1 {
